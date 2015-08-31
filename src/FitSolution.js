@@ -23,6 +23,6 @@ var FitSolution = {
 	},
 	scaleRateByHeight:function () {
 		return this.screen_designed_height_rate;
-	}
+	} 
 	
 }
