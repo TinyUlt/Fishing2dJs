@@ -7,6 +7,7 @@
         <Folder Name="Background">
           <Image Name="normal_map0.png" />
         </Folder>
+        <Project Name="LoadingScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>

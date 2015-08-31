@@ -54,8 +54,12 @@ cc.game.onStart = function(){
     FitSolution.init(GlobalVariables.designWidth, GlobalVariables.designHeight);
 
     //load resources
-    cc.LoaderScene.preload(g_resources, function () {
-        cc.director.runScene(new GameScene());
-    }, this);
+
+
+    cc.loader.load(LoadingScene_json,function(){},function(){cc.log("ok"),cc.director.runScene(new LoadingScene())});
+
+    //cc.LoaderScene.preload(g_resources, function () {
+    //cc.director.runScene(new LoadingScene());
+    //}, this);
 };
 cc.game.run();

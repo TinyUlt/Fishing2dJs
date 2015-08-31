@@ -11,10 +11,12 @@
     "modules" : ["cocos2d", "cocostudio"],
 
     "jsList" : [
+        "src/FitSolution.js",
         "src/resource.js",
+        "src/LoadingScene.js",
         "src/gameScene.js",
         "src/Helper.js",
-        "src/GlobalVariables.js",
-        "src/FitSolution.js"
+        "src/GlobalVariables.js"
+
     ]
 }

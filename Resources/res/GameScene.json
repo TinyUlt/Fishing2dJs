@@ -1,6 +1,6 @@
 {
   "ID": "a745c3bb-93e8-4496-a968-16fe41d47c07",
-  "Version": "2.2.6.0",
+  "Version": "2.3.0.1",
   "Name": "GameScene",
   "Content": {
     "Content": {
@@ -15,55 +15,7 @@
         "Tag": 22,
         "Children": [
           {
-            "FileData": {
-              "Type": "Normal",
-              "Path": "forzen.png",
-              "Plist": ""
-            },
-            "Scale9Width": 960,
-            "Scale9Height": 640,
-            "StretchWidthEnable": true,
-            "StretchHeightEnable": true,
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
-            },
-            "Position": {
-              "X": 480.0,
-              "Y": 320.0
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "CColor": {},
-            "IconVisible": false,
-            "PositionPercentXEnabled": true,
-            "PositionPercentYEnabled": true,
-            "PrePosition": {
-              "X": 0.5,
-              "Y": 0.5
-            },
-            "PreSize": {
-              "X": 1.0,
-              "Y": 1.0
-            },
-            "Tag": 92,
-            "ActionTag": 1704044956,
-            "Size": {
-              "X": 960.0,
-              "Y": 640.0
-            },
-            "Name": "Image_frozen",
-            "ctype": "ImageViewObjectData"
-          },
-          {
             "BackColorAlpha": 102,
-            "FileData": {
-              "Type": "Normal",
-              "Path": "help.png",
-              "Plist": ""
-            },
             "SingleColor": {
               "R": 150,
               "G": 200
@@ -76,16 +28,15 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
-            "Scale9Width": 882,
-            "Scale9Height": 469,
-            "TouchEnable": true,
+            "StretchWidthEnable": true,
+            "StretchHeightEnable": true,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 480.0001,
-              "Y": 349.0002
+              "X": 683.0,
+              "Y": 384.0
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -95,65 +46,37 @@
             "IconVisible": false,
             "PrePosition": {
               "X": 0.5,
-              "Y": 0.5453
+              "Y": 0.5
             },
             "PreSize": {
-              "X": 0.9187,
-              "Y": 0.7328
+              "X": 1.0,
+              "Y": 1.0
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "BothEdge",
-            "LeftMargin": 39.0001,
-            "RightMargin": 38.9999,
-            "TopMargin": 56.4998,
-            "BottomMargin": 114.5002,
-            "Tag": 112,
+            "Tag": 5,
             "Children": [
               {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
                 },
-                "DisabledFileData": {
-                  "Type": "Normal",
-                  "Path": "res/rank_btn_close_gray.png",
-                  "Plist": ""
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
                 },
-                "PressedFileData": {
-                  "Type": "Normal",
-                  "Path": "res/rank_btn_close_clcik.png",
-                  "Plist": ""
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
                 },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "res/rank_btn_close.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9Width": 74,
-                "Scale9Height": 74,
-                "OutlineSize": 0,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "G": 127,
-                  "B": 80
-                },
-                "ShadowOffsetX": 0,
-                "ShadowOffsetY": 0,
-                "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 865.5992,
-                  "Y": 423.4683
+                  "X": 683.0,
+                  "Y": 384.0
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -162,43 +85,95 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.9814,
-                  "Y": 0.9029
+                  "X": 0.5,
+                  "Y": 0.5
                 },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
                 "PreSize": {
-                  "X": 0.0839,
-                  "Y": 0.1578
+                  "X": 1.0,
+                  "Y": 1.0
                 },
-                "LeftMargin": 828.5992,
-                "RightMargin": -20.5992,
-                "TopMargin": 8.5317,
-                "BottomMargin": 386.4683,
-                "Tag": 113,
-                "ActionTag": 894896407,
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "Tag": 6,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "Background/normal_map0.png",
+                      "Plist": ""
+                    },
+                    "Scale9Width": 1366,
+                    "Scale9Height": 768,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 683.0,
+                      "Y": 384.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 1.4229,
+                      "Y": 1.2
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": -203.0,
+                    "RightMargin": -203.0,
+                    "TopMargin": -64.0,
+                    "BottomMargin": -64.0,
+                    "Tag": 7,
+                    "ActionTag": -348164526,
+                    "Size": {
+                      "X": 1366.0,
+                      "Y": 768.0
+                    },
+                    "Name": "Image_Background1",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": 1050206354,
                 "Size": {
-                  "X": 74.0,
-                  "Y": 74.0
+                  "X": 1366.0,
+                  "Y": 768.0
                 },
-                "Name": "Button_help_close",
-                "ctype": "ButtonObjectData"
+                "Name": "Panel_Background",
+                "ctype": "PanelObjectData"
               }
             ],
-            "ActionTag": 1385669875,
+            "ActionTag": -369445453,
             "Size": {
-              "X": 882.0,
-              "Y": 469.0
+              "X": 1366.0,
+              "Y": 768.0
             },
-            "Name": "Panel_help",
+            "Name": "Panel_Mian",
             "ctype": "PanelObjectData"
           }
         ],
         "Size": {
-          "X": 960.0,
-          "Y": 640.0
+          "X": 1366.0,
+          "Y": 768.0
         },
         "Name": "Scene",
         "ctype": "SingleNodeObjectData"
       },
+      "UsedResources": [
+        "Background/normal_map0.png"
+      ],
       "ctype": "GameProjectData"
     }
   },
