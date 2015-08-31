@@ -109,16 +109,24 @@
 
 
     var fishConfig = [
-        {type : fishKind.FISH_BIANFUYU ,name : "蝙蝠鱼", ArmatureName:"fish_bianfuyu",ExportJsonPath:"Resources/fishAramture/fish_bianfuyu/fish_bianfuyu.ExportJson"},
+        {type : fishKind.FISH_BIANFUYU ,name : "蝙蝠鱼", ArmatureName:"fish_bianfuyu",ExportJsonPath:"Resources/fishAramture/fish_bianfuyu/fish_bianfuyu.ExportJson", PlistPath:"Resources/fishAramture/fish_bianfuyu/fish_bianfuyu0.plist", PngPath:"Resources/fishAramture/fish_bianfuyu/fish_bianfuyu0.png"},
     ]
 
+    var SwimType =  {
+        UnKnow : 0,
+        SBSwim : 1,
+
+    };
+    var swimTimeDt = (1/60.0);
     _G.GlobalVariables = {
         designWidth : 1366,    // 屏宽
         designHeight : 768,    // 屏高
         gameSceneNeedFit:gameSceneNeedFit,
         loadingSceneNeedFit:loadingSceneNeedFit,
         fishKind : fishKind,
-        fishConfig: fishConfig
+        fishConfig: fishConfig,
+        SwimType : SwimType,
+        swimTimeDt : swimTimeDt,
     }
 
 })(this)

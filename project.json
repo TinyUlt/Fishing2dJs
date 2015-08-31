@@ -13,10 +13,14 @@
     "jsList" : [
         "src/FitSolution.js",
         "src/resource.js",
-        "src/LoadingScene.js",
-        "src/gameScene.js",
+        "src/Scenes/LoadingScene.js",
+        "src/Scenes/GameScene.js",
         "src/Helper.js",
-        "src/GlobalVariables.js"
+        "src/GlobalVariables.js",
+        "src/Units/Fish.js",
+        "src/Managers/FishManager.js",
+        "src/Units/Swim.js",
+        "src/Units/SBSwim.js"
 
     ]
 }
