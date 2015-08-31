@@ -3,6 +3,60 @@
  * @Author wanght
  * @Email whtoo@qq.com
  */
+
+function createRandomPath (){
+    var array = new Array();
+    array.push(this.createOutTrunPoint());
+    array.push(this.createInTurnPoint());
+    array.push(this.createInTurnPoint());
+    array.push(this.createInTurnPoint());
+    array.push(this.createOutTrunPoint());
+
+    return array;
+}
+function createOutTrunPoint(){
+    var x = 0;
+    var y = 0;
+    var offset = 200;
+    var r =Math.floor( Math.random()* 4);
+    switch(r){
+        case 0:{
+            x = -offset;
+            y = Math.random()* (GlobalVariables.designHeight + offset * 2) - offset;
+
+            break;
+        }
+        case 1:{
+            x = GlobalVariables.designWidth + offset;
+            y = Math.random()* (GlobalVariables.designHeight + offset * 2) - offset;
+            break;
+        }
+        case 2:{
+            y = -offset;
+            x = Math.random()* (GlobalVariables.designWidth + offset * 2) - offset;
+            break;
+        }
+        case 3:{
+            y = GlobalVariables.designHeight + offset;
+            x = Math.random()* (GlobalVariables.designWidth + offset * 2) - offset;
+            break;
+        }
+        default :{
+            x = 0;
+            y = 0;
+            break;
+        }
+    }
+
+    return cc.p(x, y);
+}
+function createInTurnPoint(){
+    var magin = 100;
+    var x = Math.random() * (GlobalVariables.designWidth - 2 * magin) + magin;
+    var y = Math.random() * (GlobalVariables.designHeight - 2 * magin) + magin;
+
+    return cc.p(x, y);
+}
 function SBSwim(turnPoints, isSpeedBehaviors, elapsed){
     Swim.call(this);
     this.velocity = cc.p(0,0);
@@ -22,11 +76,11 @@ function SBSwim(turnPoints, isSpeedBehaviors, elapsed){
                 break;
             }else{
                 drawPosition = this.pathPoint.point;
-                cc.log("drawPosition.x = " + drawPosition.x + "-- drawPosition.y = "+ drawPosition.y);
+                //cc.log("drawPosition.x = " + drawPosition.x + "-- drawPosition.y = "+ drawPosition.y);
                 this.linePointArray.push(drawPosition);
             }
         }while(1)
-        cc.log(this.linePointArray);
+        //cc.log(this.linePointArray);
         this.velocity = cc.p(0,0);
         this.turnIndex = 0;
         this.turnIndex++;
@@ -53,7 +107,7 @@ function SBSwim(turnPoints, isSpeedBehaviors, elapsed){
                     var normalized = cc.pNormalize(this.velocity);
                     var speed =cc.pMult(normalized, downSpeed / 800.0)  ;
                     if(cc.pLength(this.velocity) > 3 &&  cc.pLength(this.velocity) > cc.pLength(speed)){
-                        this.velocity = cc.pSub(this.velocity,  speed);
+                        cc.pSubIn(this.velocity,  speed);
                     }
                 }
             }
@@ -69,12 +123,13 @@ function SBSwim(turnPoints, isSpeedBehaviors, elapsed){
 
         var desireVelocity =cc.pMult(cc.pNormalize(cc.pSub( this.turnPoints[this.turnIndex] , position)),this.target.speed * dt) ;
         var steering =cc.pSub(desireVelocity, this.velocity) ;
-        steering = cc.pMult(steering,  1.0 / mass) ;
+        cc.pMultIn(steering,  1.0 / mass) ;
 
-        this.velocity =cc.pAdd(steering , this.velocity) ;
+        cc.pAddIn(this.velocity, steering ) ;
         this.pathPoint.point = cc.pAdd(position, this.velocity);
         this.pathPoint.isDone = false;
         return;
     }
+
 
 }

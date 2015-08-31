@@ -80,6 +80,13 @@
 	function scaleRateByWidth() {
 		return screen_designed_width_rate;
 	};
+	//设计尺寸转屏幕尺寸
+	function designedToScreen(point){
+		return cc.p(point.x * screen_designed_width_rate, point.y * screen_designed_height_rate);
+	}
+	function screenToDesigned(point){
+		return cc.p(point.x / screen_designed_width_rate, point.y / screen_designed_height_rate)
+	}
 	_G.FitSolution = {
 		UIFitType:UIFitType,
 		init:init,
@@ -88,6 +95,8 @@
 		scaleRateNoBoard:scaleRateNoBoard,
 		scaleRateByHeight:scaleRateByHeight,
 		scaleRateByWidth:scaleRateByWidth,
+		designedToScreen:designedToScreen,
+		screenToDesigned:screenToDesigned,
 	}
 })(this)
 

@@ -20,7 +20,8 @@
         "src/Units/Fish.js",
         "src/Managers/FishManager.js",
         "src/Units/Swim.js",
-        "src/Units/SBSwim.js"
+        "src/Units/SBSwim.js",
+        "src/Managers/SwimManager.js"
 
     ]
 }

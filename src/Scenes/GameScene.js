@@ -67,6 +67,8 @@ var GameLayer = (function(){
      return cc.Layer.extend({
          sprite: null,
          Panel_help: null,
+         swimManager:null,
+         fishManager:null,
          ctor: function () {
              //////////////////////////////
              // 1. super init first
@@ -100,31 +102,24 @@ var GameLayer = (function(){
 
              this.scheduleUpdate();
 
-             var fishManager = new FishManager();
+             this.swimManager = new SwimManager();
 
-             var fish = fishManager.createFish(GlobalVariables.fishKind.FISH_WONIUYU);
-             this.addChild(fish);
-             fish.x = 300;
-             fish.y = 300;
+             this.fishManager = new FishManager();
 
-             var array = new Array();
-             array.push(cc.p(0,0));
-             array.push(cc.p(400,500));
-             array.push(cc.p(800,100));
-             var swim = new SBSwim(array,true, 0);
-             swim.setTarget(fish);
 
-             //var armature = new ccs.Armature(GlobalVariables.fishConfig[GlobalVariables.fishKind.FISH_WONIUYU].ArmatureName);
-             //armature.getAnimation().playWithIndex(0);
-             //armature.anchorX = 0.5;
-             //armature.anchorY = 0.5;
-             //armature.x = 300;
-             //armature.y = 300;
-             //this.addChild(armature);
+             this.schedule(this.createFish, 1);
 
          },
          update:function(dt){
              //cc.log("qwe");
+             this.swimManager.update(dt);
+         },
+         createFish:function(dt){
+             var fish = this.fishManager.createFish(GlobalVariables.fishKind.FISH_WONIUYU);
+             this.addChild(fish);
+
+             var swim = new SBSwim(createRandomPath(),true, 0);
+             this.swimManager.setFishSwim(fish, swim);
          }
      })
 
