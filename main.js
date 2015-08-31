@@ -49,14 +49,13 @@
 
 cc.game.onStart = function(){
     cc.view.adjustViewPort(true);
-    var screenSize = cc.view.getFrameSize();
-    cc.view.setDesignResolutionSize(screenSize.width, screenSize.height, cc.ResolutionPolicy.SHOW_ALL);
+
     cc.view.resizeWithBrowserSize(true);
-    
-    FitSolution.setScreen_designed_rate(screenSize, new cc.size(960, 640));
+    FitSolution.init(GlobalVariables.designWidth, GlobalVariables.designHeight);
+
     //load resources
     cc.LoaderScene.preload(g_resources, function () {
-        cc.director.runScene(new HelloWorldScene());
+        cc.director.runScene(new GameScene());
     }, this);
 };
 cc.game.run();
