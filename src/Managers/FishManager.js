@@ -12,4 +12,13 @@ function FishManager(){
         fish.speed = 200;
         return fish;
     }
+    this.destroyFish = function(fish){
+        for(var i = 0; i < this.fishArray.length; i++){
+            if(fish == this.fishArray[i]){
+                this.fishArray.splice(i,1);
+                fish.removeFromParent(true);
+                break;
+            }
+        }
+    }
 }

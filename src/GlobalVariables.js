@@ -109,7 +109,9 @@
 
 
     var fishConfig = [
-        {type : fishKind.FISH_BIANFUYU ,name : "蝙蝠鱼", ArmatureName:"fish_bianfuyu",ExportJsonPath:"Resources/fishAramture/fish_bianfuyu/fish_bianfuyu.ExportJson", PlistPath:"Resources/fishAramture/fish_bianfuyu/fish_bianfuyu0.plist", PngPath:"Resources/fishAramture/fish_bianfuyu/fish_bianfuyu0.png"},
+        {type : fishKind.FISH_WONIUYU ,name : "蜗牛鱼",  ArmatureName:"fish_woniuyu", bounding:[{p:cc.p(16,0), r:10},{p:cc.p(0,0), r:10}], ExportJsonPath:"Resources/fishAramture/fish_woniuyu/fish_woniuyu.ExportJson", PlistPath:"Resources/fishAramture/fish_woniuyu/fish_woniuyu0.plist", PngPath:"Resources/fishAramture/fish_woniuyu/fish_woniuyu0.png"},
+        //{type : fishKind.FISH_BIANFUYU ,name : "蝙蝠鱼", ArmatureName:"fish_bianfuyu",bounding:[{p:cc.p(16,0), r:10},{p:cc.p(0,0), r:10}], ExportJsonPath:"Resources/fishAramture/fish_bianfuyu/fish_bianfuyu.ExportJson", PlistPath:"Resources/fishAramture/fish_bianfuyu/fish_bianfuyu0.plist", PngPath:"Resources/fishAramture/fish_bianfuyu/fish_bianfuyu0.png"},
+
     ]
 
     var SwimType =  {
@@ -127,6 +129,8 @@
         fishConfig: fishConfig,
         SwimType : SwimType,
         swimTimeDt : swimTimeDt,
+        currentFishManager:null,
+        currentGameLayer:null,
     }
 
 })(this)

@@ -105,10 +105,13 @@ var GameLayer = (function(){
              this.swimManager = new SwimManager();
 
              this.fishManager = new FishManager();
+             GlobalVariables.currentGameLayer = this;
+             GlobalVariables.currentFishManager = this.fishManager;
 
 
-             this.schedule(this.createFish, 1);
+             //this.schedule(this.createFish, 1);
 
+             this.createFish(1);
          },
          update:function(dt){
              //cc.log("qwe");
