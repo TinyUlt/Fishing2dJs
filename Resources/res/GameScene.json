@@ -192,7 +192,62 @@
                   "X": 1366.0,
                   "Y": 768.0
                 },
-                "Name": "Panel_Battery",
+                "Name": "Panel_Fish",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "StretchWidthEnable": true,
+                "StretchHeightEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 692.9999,
+                  "Y": 374.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5073,
+                  "Y": 0.487
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 1.0
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 9.9999,
+                "RightMargin": -9.9999,
+                "TopMargin": 10.0,
+                "BottomMargin": -10.0,
+                "Tag": 12,
+                "ActionTag": 426285720,
+                "Size": {
+                  "X": 1366.0,
+                  "Y": 768.0
+                },
+                "Name": "Panel_Bullet",
                 "ctype": "PanelObjectData"
               },
               {

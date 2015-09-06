@@ -129,6 +129,9 @@ var GameLayer = (function(){
              //this.addChild(fish);
              //fish.x = 300;
              //fish.y = 400;
+             this.UILayers.fish = ccui.helper.seekWidgetByName(mainscene.node, "Panel_Fish");
+             this.UILayers.bullet = ccui.helper.seekWidgetByName(mainscene.node, "Panel_Bullet");
+             //this.UILayers.bullet =
 
              var Panel_turret = ccui.helper.seekWidgetByName(mainscene.node, "Panel_turret5");
              GlobalVariables.managers.currentPlayerManager.initPlayer(5, Panel_turret);
@@ -140,7 +143,7 @@ var GameLayer = (function(){
          },
          createFish:function(dt){
              var fish = GlobalVariables.managers.currentFishManager.createFish(GlobalVariables.fishKind.FISH_JIANYU);
-             this.addChild(fish);
+             this.UILayers.fish.addChild(fish);
 
              var swim = new SBSwim(createRandomPath(),true, 0);
              GlobalVariables.managers.currentSwimManager.setFishSwim(fish, swim);
@@ -164,7 +167,7 @@ var GameLayer = (function(){
                  lockFish:null
              });
 
-             target.addChild(bullet);
+             target.UILayers.bullet.addChild(bullet);
 
              GlobalVariables.managers.currentPlayerManager.setGaunBarrelAngle(5,touchPoint);
              return true;
