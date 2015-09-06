@@ -8,7 +8,7 @@ function SwimManager(){
     this.setFishSwim = function(fish, swim){
         swim.setTarget(fish);
         this.swimArray.push(swim);
-    }
+    };
     this.update = function(dt){
         for(var i = 0 ; i < this.swimArray.length; i ++){
             var swim = this.swimArray[i];
@@ -16,10 +16,18 @@ function SwimManager(){
 
             }else{//结束
                 //swim.target.removeFromParent(true);
-                GlobalVariables.currentFishManager.destroyFish(swim.target);
+                GlobalVariables.currentFishManager.destroyFish(swim.target, false);
                 this.swimArray.splice(i,1);
             }
         }
 
-    }
+    };
+    this.destroySwim = function(fish){
+        for(var i = 0; i < this.swimArray.length; i++){
+            var swimAction = this.swimArray[i];
+            if(swimAction.target == fish){
+                this.swimArray.splice(i,1);
+            }
+        }
+    };
 }

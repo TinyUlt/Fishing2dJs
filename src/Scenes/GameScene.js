@@ -111,6 +111,7 @@ var GameLayer = (function(){
              GlobalVariables.currentGameLayer = this;
              GlobalVariables.currentFishManager = this.fishManager;
              GlobalVariables.currentBulletManager = this.bulletManager;
+             GlobalVariables.currentSwimManager = this.swimManager;
 
              this.schedule(this.createFish, 1);
 
@@ -123,7 +124,7 @@ var GameLayer = (function(){
              }, this);
 
 
-             //var fish = this.fishManager.createFish(GlobalVariables.fishKind.FISH_HUDIEYU);
+             //var fish = this.fishManager.createFish(GlobalVariables.fishKind.FISH_JIANYU);
              //this.addChild(fish);
              //fish.x = 300;
              //fish.y = 400;
@@ -134,7 +135,7 @@ var GameLayer = (function(){
              this.collisionManaget.update(dt);
          },
          createFish:function(dt){
-             var fish = this.fishManager.createFish(GlobalVariables.fishKind.FISH_HUDIEYU);
+             var fish = this.fishManager.createFish(GlobalVariables.fishKind.FISH_JIANYU);
              this.addChild(fish);
 
              var swim = new SBSwim(createRandomPath(),true, 0);

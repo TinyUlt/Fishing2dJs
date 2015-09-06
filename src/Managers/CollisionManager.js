@@ -14,7 +14,8 @@ function CollisionManager(){
                     var distance = cc.pDistance(bound.p, bulletPosition);
                     if(distance < bound.r){
                         cc.log("hit");
-                        GlobalVariables.currentFishManager.destroyFish(fish);
+                        GlobalVariables.currentSwimManager.destroySwim(fish);
+                        GlobalVariables.currentFishManager.destroyFish(fish, true);
                         GlobalVariables.currentBulletManager.destroyBullet(bullet);
                     }
                 }

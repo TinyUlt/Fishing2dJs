@@ -4,6 +4,7 @@
  * @Email whtoo@qq.com
  */
 var Fish = cc.Sprite.extend({
+    armature:null,
     type:null,
     speed:0,
     oldPosition:cc.p(0,0),
@@ -14,12 +15,12 @@ var Fish = cc.Sprite.extend({
         this._super();
         this.type = type;
 
-        var armature = new ccs.Armature(GlobalVariables.fishConfig[type].ArmatureName);
-        armature.getAnimation().playWithIndex(0);
-        armature.anchorX = 0.5;
-        armature.anchorY = 0.5;
-        armature.setPosition(GlobalVariables.fishConfig[type].positionOffset);
-        this.addChild(armature);
+        this.armature = new ccs.Armature(GlobalVariables.fishConfig[type].ArmatureName);
+        this.armature.getAnimation().playWithIndex(0);
+        this.armature.anchorX = 0.5;
+        this.armature.anchorY = 0.5;
+        this.armature.setPosition(GlobalVariables.fishConfig[type].positionOffset);
+        this.addChild(this.armature);
 
         this.bound = GlobalVariables.fishConfig[this.type].bounding;
         //this.drawCircle();
@@ -27,6 +28,20 @@ var Fish = cc.Sprite.extend({
 
 
         this.scheduleUpdate();
+    },
+    destroy:function(playDeathAnimation){
+        if(playDeathAnimation){
+            this.armature.getAnimation().playWithIndex(1);
+            var self = this;
+            this.armature.getAnimation().setMovementEventCallFunc(function(armature, movementType, movementID) {
+                if (movementType == ccs.MovementEventType.complete){
+                    self.removeFromParent();
+                }
+
+            });
+        }else{
+            this.removeFromParent();
+        }
     },
     setProperty:function(position){
 
@@ -74,6 +89,6 @@ var Fish = cc.Sprite.extend({
         return array;
     },
     update:function(dt){
-        this.drawCollision();
+        //this.drawCollision();
     }
 })
