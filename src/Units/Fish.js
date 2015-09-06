@@ -18,6 +18,7 @@ var Fish = cc.Sprite.extend({
         armature.getAnimation().playWithIndex(0);
         armature.anchorX = 0.5;
         armature.anchorY = 0.5;
+        armature.setPosition(GlobalVariables.fishConfig[type].positionOffset);
         this.addChild(armature);
 
         this.bound = GlobalVariables.fishConfig[this.type].bounding;
@@ -64,15 +65,15 @@ var Fish = cc.Sprite.extend({
     },
     getCollisionBound:function(){
         var array = new Array();
+        var position = FitSolution.screenToDesigned(this.getPosition());
         for(var i = 0; i < this.bound.length; i++){
             var b = this.bound[i];
-            GlobalVariables.currentGameLayer.addChild(this.draw, 10);
-            var p = cc.pRotateByAngle(cc.pAdd(b.p,this.getPosition() ) , this.getPosition(),cc.degreesToRadians(-this.rotation)  );
+            var p = cc.pRotateByAngle(cc.pAdd(b.p,position ) , position,cc.degreesToRadians(-this.rotation)  );
             array.push({p:p,r:b.r});
         }
         return array;
     },
     update:function(dt){
-        //this.drawCollision();
+        this.drawCollision();
     }
 })

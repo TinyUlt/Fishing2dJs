@@ -69,6 +69,8 @@ var GameLayer = (function(){
          Panel_help: null,
          swimManager:null,
          fishManager:null,
+         bulletManager:null,
+         collisionManaget:null,
          ctor: function () {
              //////////////////////////////
              // 1. super init first
@@ -103,14 +105,14 @@ var GameLayer = (function(){
              this.scheduleUpdate();
 
              this.swimManager = new SwimManager();
-
              this.fishManager = new FishManager();
+             this.bulletManager = new BulletManager();
+             this.collisionManaget = new CollisionManager();
              GlobalVariables.currentGameLayer = this;
              GlobalVariables.currentFishManager = this.fishManager;
-
+             GlobalVariables.currentBulletManager = this.bulletManager;
 
              this.schedule(this.createFish, 1);
-
 
              cc.eventManager.addListener({
                  event: cc.EventListener.TOUCH_ONE_BY_ONE,
@@ -121,16 +123,18 @@ var GameLayer = (function(){
              }, this);
 
 
-
-
-             //this.createFish(1);
+             //var fish = this.fishManager.createFish(GlobalVariables.fishKind.FISH_HUDIEYU);
+             //this.addChild(fish);
+             //fish.x = 300;
+             //fish.y = 400;
          },
          update:function(dt){
-             //cc.log("qwe");
+
              this.swimManager.update(dt);
+             this.collisionManaget.update(dt);
          },
          createFish:function(dt){
-             var fish = this.fishManager.createFish(GlobalVariables.fishKind.FISH_WONIUYU);
+             var fish = this.fishManager.createFish(GlobalVariables.fishKind.FISH_HUDIEYU);
              this.addChild(fish);
 
              var swim = new SBSwim(createRandomPath(),true, 0);
@@ -139,15 +143,13 @@ var GameLayer = (function(){
          onTouchBegan:function (touch, event) {
              var target = event.getCurrentTarget();
              var touchPoint = touch.getLocation();
-             var bullet = new Bullet;
-             //bullet.setPosition(touchPoint);
-             target.addChild(bullet);
-
-             bullet.fly({
+             var endPoint = FitSolution.screenToDesigned(touchPoint);
+             var bullet = target.bulletManager.createBullet({
+                 type:GlobalVariables.bulletKind.bullet1,
                  bulletID:0,
                  chairID:0,
                  startPoint:cc.p(300,300),
-                 endPoint:FitSolution.screenToDesigned(touchPoint),
+                 endPoint:endPoint,
                  pastTime:0,
                  multiple:0,
                  speed:300,
@@ -156,6 +158,7 @@ var GameLayer = (function(){
                  lockFish:null
              });
 
+             target.addChild(bullet);
              return true;
          },
          onTouchMoved:function (touch, event) {
@@ -166,7 +169,6 @@ var GameLayer = (function(){
              var target = event.getCurrentTarget();
          },
      })
-
 
  })();
 

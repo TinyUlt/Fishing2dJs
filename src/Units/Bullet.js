@@ -7,6 +7,7 @@ var Bullet = ccs.Armature.extend({
     startPoint:cc.p(0,0),
     data:null,
     //{
+    // type:GlobalVariables.bulletKind.bullet1,
     // bulletID : 0,
     // charID : 0,
     // startPoint : cc.p(0,0),
@@ -20,12 +21,11 @@ var Bullet = ccs.Armature.extend({
     // },
 
     dp:cc.p(0,0),
-    ctor:function(type){
+    ctor:function(bulletData){
         this._super();
         this.init("zidan1");
         this.getAnimation().playWithIndex(0);
-    },
-    fly:function(bulletData){
+
         this.data = bulletData;
         this.dp = cc.pSub(this.data.endPoint , this.data.startPoint);
         var deg = Math.atan2(this.dp.x, this.dp.y);
@@ -34,7 +34,7 @@ var Bullet = ccs.Armature.extend({
          var x = Math.sin(deg) * weanponLenth;
          var y = Math.cos(deg) * weanponLenth;
          var startPoint = cc.pAdd(this.data.startPoint , cc.p(x,y));
-        * */
+         * */
 
         var pastX = Math.sin(deg) * (this.data.speed * this.data.pastTime);
         var pastY = Math.cos(deg) * (this.data.speed * this.data.pastTime);
