@@ -2,9 +2,11 @@
  * Created by tinyult on 15/9/6.
  */
 function CoinManager(){
-    this.getCoins = function(fish, value, endPoint){
+    this.getCoins = function(fish, value, chairID){
         var coinArray = new Array();
         var fishType = fish.type;
+
+        var endPoint = FitSolution.designedToScreen(cc.p(GlobalVariables.kGunPos[chairID].x, GlobalVariables.kGunPos[chairID].y))
         if(fishType <= GlobalVariables.fishKind.FISH_HUANGCAOYU){
             for(var i = 0; i < 5; i ++){
 
@@ -14,6 +16,7 @@ function CoinManager(){
                 coin.setPosition(cc.pAdd(fish.getPosition(),cc.p(randomH, randomV) )  );
                 coinArray.push(coin) ;
 
+                coin.chairID = chairID;
                 if(i == 0) coin.value = value;
             }
         }else if(fishType < GlobalVariables.fishKind.FISH_XIAOCHOUYU){
@@ -44,6 +47,7 @@ function CoinManager(){
     };
     this.coinActionDone = function(pSender){
         cc.log(pSender.value);
+        GlobalVariables.managers.currentPlayerManager.addFishCoin(pSender.chairID,pSender.value);
         pSender.removeFromParent();
     }
 }

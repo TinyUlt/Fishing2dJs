@@ -473,6 +473,55 @@
                         },
                         "Name": "Panel_GunBarrel",
                         "ctype": "PanelObjectData"
+                      },
+                      {
+                        "FontSize": 20,
+                        "LabelText": "Text Label",
+                        "HorizontalAlignmentType": "HT_Center",
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 137.8294,
+                          "Y": 44.56
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.2228
+                        },
+                        "PreSize": {
+                          "X": 0.3301,
+                          "Y": 0.115
+                        },
+                        "LeftMargin": 92.3294,
+                        "RightMargin": 92.3294,
+                        "TopMargin": 143.94,
+                        "BottomMargin": 33.06,
+                        "Tag": 15,
+                        "ActionTag": 1546994116,
+                        "Size": {
+                          "X": 91.0,
+                          "Y": 23.0
+                        },
+                        "Name": "Text_CoinShow",
+                        "ctype": "TextObjectData"
                       }
                     ],
                     "ActionTag": 1599449445,
@@ -491,49 +540,6 @@
                 },
                 "Name": "Panel_Bottom",
                 "ctype": "PanelObjectData"
-              },
-              {
-                "FileData": {
-                  "Type": "Default",
-                  "Path": "Default/ImageFile.png",
-                  "Plist": ""
-                },
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 177.4434,
-                  "Y": 83.0208
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.1299,
-                  "Y": 0.1081
-                },
-                "PreSize": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "HorizontalEdge": "BothEdge",
-                "VerticalEdge": "BothEdge",
-                "LeftMargin": 154.4434,
-                "RightMargin": 1165.5566,
-                "TopMargin": 661.9792,
-                "BottomMargin": 60.0208,
-                "Tag": 14,
-                "ActionTag": 2014916641,
-                "Size": {
-                  "X": 46.0,
-                  "Y": 46.0
-                },
-                "Name": "Image_3",
-                "ctype": "ImageViewObjectData"
               },
               {
                 "BackColorAlpha": 102,
@@ -608,7 +614,6 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
-        "Default/ImageFile.png",
         "Battery/gun02_double.png",
         "Battery/turret5.png",
         "Background/normal_map0.png"

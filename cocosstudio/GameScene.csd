@@ -101,6 +101,17 @@
                         <EndColor A="255" R="255" G="255" B="255" />
                         <ColorVector ScaleY="1.0000" />
                       </AbstractNodeData>
+                      <AbstractNodeData Name="Text_CoinShow" ActionTag="1546994116" Tag="15" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="92.3294" RightMargin="92.3294" TopMargin="143.9400" BottomMargin="33.0600" FontSize="20" LabelText="Text Label" HorizontalAlignmentType="HT_Center" ctype="TextObjectData">
+                        <Size X="91.0000" Y="23.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="137.8294" Y="44.5600" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5000" Y="0.2228" />
+                        <PreSize X="0.3301" Y="0.1150" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" />
                     <Position X="176.0774" Y="26.0000" />
@@ -124,16 +135,6 @@
                 <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="Image_3" ActionTag="2014916641" Tag="14" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="154.4434" RightMargin="1165.5566" TopMargin="661.9792" BottomMargin="60.0208" ctype="ImageViewObjectData">
-                <Size X="46.0000" Y="46.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="177.4434" Y="83.0208" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.1299" Y="0.1081" />
-                <PreSize />
-                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="Panel_Coin" ActionTag="-1940622807" Tag="13" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="19.9998" RightMargin="-19.9998" TopMargin="20.0001" BottomMargin="-20.0001" StretchWidthEnable="True" StretchHeightEnable="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="1366.0000" Y="768.0000" />
