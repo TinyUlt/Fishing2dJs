@@ -66,14 +66,11 @@ var GameLayer = (function(){
 
      return cc.Layer.extend({
          sprite: null,
-         Panel_help: null,
-
          UILayers:{
              fish:null,
              bullet:null,
              coin:null
          },
-         playerManager:null,
          ctor: function () {
              //////////////////////////////
              // 1. super init first
@@ -108,12 +105,13 @@ var GameLayer = (function(){
              this.scheduleUpdate();
 
 
-             GlobalVariables.managers.currentGameLayer = this;
+             GlobalVariables.currentGameLayer = this;
              GlobalVariables.managers.currentFishManager = new FishManager();
              GlobalVariables.managers.currentBulletManager =new BulletManager();
              GlobalVariables.managers.currentSwimManager =  new SwimManager();
              GlobalVariables.managers.currentPlayerManager = new PlayerManager();
-             GlobalVariables.managers.currentCollisionManaget = new CollisionManager();
+             GlobalVariables.managers.currentCollisionManager = new CollisionManager();
+             GlobalVariables.managers.currentCoinManager = new CoinManager();
              this.schedule(this.createFish, 1);
 
              cc.eventManager.addListener({
@@ -131,18 +129,26 @@ var GameLayer = (function(){
              //fish.y = 400;
              this.UILayers.fish = ccui.helper.seekWidgetByName(mainscene.node, "Panel_Fish");
              this.UILayers.bullet = ccui.helper.seekWidgetByName(mainscene.node, "Panel_Bullet");
+             this.UILayers.coin = ccui.helper.seekWidgetByName(mainscene.node, "Panel_Coin");
              //this.UILayers.bullet =
 
              var Panel_turret = ccui.helper.seekWidgetByName(mainscene.node, "Panel_turret5");
              GlobalVariables.managers.currentPlayerManager.initPlayer(5, Panel_turret);
+
+             //var coin = new Coin();
+             //this.UILayers.coin.addChild(coin);
+             //coin.x = 300;
+             //coin.y = 400;
+
+
          },
          update:function(dt){
 
              GlobalVariables.managers.currentSwimManager.update(dt);
-             GlobalVariables.managers.currentCollisionManaget.update(dt);
+             GlobalVariables.managers.currentCollisionManager.update(dt);
          },
          createFish:function(dt){
-             var fish = GlobalVariables.managers.currentFishManager.createFish(GlobalVariables.fishKind.FISH_JIANYU);
+             var fish = GlobalVariables.managers.currentFishManager.createFish(GlobalVariables.fishKind.FISH_HUANGCAOYU);
              this.UILayers.fish.addChild(fish);
 
              var swim = new SBSwim(createRandomPath(),true, 0);
@@ -161,7 +167,7 @@ var GameLayer = (function(){
                  endPoint:endPoint,
                  pastTime:0,
                  multiple:0,
-                 speed:300,
+                 speed:500,
                  lockID:0,
                  deleteTime:-1,
                  lockFish:null

@@ -135,6 +135,19 @@
                 <PreSize />
                 <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
+              <AbstractNodeData Name="Panel_Coin" ActionTag="-1940622807" Tag="13" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="19.9998" RightMargin="-19.9998" TopMargin="20.0001" BottomMargin="-20.0001" StretchWidthEnable="True" StretchHeightEnable="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                <Size X="1366.0000" Y="768.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="702.9998" Y="363.9999" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.5146" Y="0.4740" />
+                <PreSize X="1.0000" Y="1.0000" />
+                <SingleColor A="255" R="150" G="200" B="255" />
+                <FirstColor A="255" R="150" G="200" B="255" />
+                <EndColor A="255" R="255" G="255" B="255" />
+                <ColorVector ScaleY="1.0000" />
+              </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="683.0000" Y="384.0000" />

@@ -120,6 +120,10 @@
         {type: bulletKind.bullet1, ExportJsonPath:"Resources/bulletArmature/zidan1.ExportJson", PlistPath:"Resources/bulletArmature/zidan10.plist", PngPath:"Resources/bulletArmature/zidan10.png"},
         {type: bulletKind.bullet2, ExportJsonPath:"Resources/bulletArmature/zidan2.ExportJson", PlistPath:"Resources/bulletArmature/zidan20.plist", PngPath:"Resources/bulletArmature/zidan20.png"},
         {type: bulletKind.bullet3, ExportJsonPath:"Resources/bulletArmature/zidan3.ExportJson", PlistPath:"Resources/bulletArmature/zidan30.plist", PngPath:"Resources/bulletArmature/zidan30.png"},
+    ];
+
+    var coinConfig = [
+        {ExportJsonPath:"Resources/coinArmature/jinbi1.ExportJson", PlistPath:"Resources/coinArmature/jinbi10.plist", PngPath:"Resources/coinArmature/jinbi10.png"},
     ]
     var fishConfig = [
         {type : fishKind.FISH_WONIUYU + i++,name : "蜗牛鱼",  ArmatureName:"fish_woniuyu", bounding:[{p:cc.p(16,0), r:10},{p:cc.p(0,0), r:10}], boundingAngle:0, positionOffset:cc.p(0,0), ExportJsonPath:"Resources/fishAramture/fish_woniuyu/fish_woniuyu.ExportJson", PlistPath:"Resources/fishAramture/fish_woniuyu/fish_woniuyu0.plist", PngPath:"Resources/fishAramture/fish_woniuyu/fish_woniuyu0.png"},
@@ -231,12 +235,21 @@
         AllPreLoadFile.push(bulletConfig[i].PlistPath);
         AllPreLoadFile.push(bulletConfig[i].PngPath);
     }
+    for(var i = 0; i < coinConfig.length; i ++){
+        AllPreLoadFile.push(coinConfig[i].ExportJsonPath)
+        AllPreLoadFile.push(coinConfig[i].PlistPath);
+        AllPreLoadFile.push(coinConfig[i].PngPath);
+    }
+    //////////////
     var AllExportJson = new Array();
     for(var i = 0; i < fishConfig.length; i++){
         AllExportJson.push(fishConfig[i].ExportJsonPath);
     }
     for(var i = 0; i < bulletConfig.length; i++){
         AllExportJson.push(bulletConfig[i].ExportJsonPath);
+    }
+    for(var i = 0; i < coinConfig.length; i ++){
+        AllExportJson.push(coinConfig[i].ExportJsonPath)
     }
 
 
@@ -267,7 +280,8 @@
             currentBulletManager:null,
             currentSwimManager:null,
             currentPlayerManager:null,
-            currentCollisionManaget:null,
+            currentCollisionManager:null,
+            currentCoinManager:null,
         },
         currentGameLayer:null,
         AllPreLoadFile:AllPreLoadFile,

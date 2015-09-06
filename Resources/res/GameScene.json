@@ -534,6 +534,61 @@
                 },
                 "Name": "Image_3",
                 "ctype": "ImageViewObjectData"
+              },
+              {
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "StretchWidthEnable": true,
+                "StretchHeightEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 702.9998,
+                  "Y": 363.9999
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5146,
+                  "Y": 0.474
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 1.0
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 19.9998,
+                "RightMargin": -19.9998,
+                "TopMargin": 20.0001,
+                "BottomMargin": -20.0001,
+                "Tag": 13,
+                "ActionTag": -1940622807,
+                "Size": {
+                  "X": 1366.0,
+                  "Y": 768.0
+                },
+                "Name": "Panel_Coin",
+                "ctype": "PanelObjectData"
               }
             ],
             "ActionTag": -369445453,

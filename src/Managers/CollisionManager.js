@@ -17,6 +17,12 @@ function CollisionManager(){
                         GlobalVariables.managers.currentSwimManager.destroySwim(fish);
                         GlobalVariables.managers.currentFishManager.destroyFish(fish, true);
                         GlobalVariables.managers.currentBulletManager.destroyBullet(bullet);
+
+                        var coins = GlobalVariables.managers.currentCoinManager.getCoins( fish ,10, FitSolution.designedToScreen(cc.p(GlobalVariables.kGunPos[5].x, GlobalVariables.kGunPos[5].y)) );
+                        for(var i = 0 ; i < coins.length; i ++){
+                            var coin = coins[i];
+                            GlobalVariables.currentGameLayer.UILayers.coin.addChild(coin);
+                        }
                     }
                 }
             }

@@ -23,10 +23,12 @@
         "src/Managers/SwimManager.js",
         "src/Units/Bullet.js",
         "src/Units/Player.js",
+        "src/Units/Coin.js",
         "src/Managers/BulletManager.js",
         "src/Managers/CollisionManager.js",
         "src/Managers/PlayerManager.js",
         "src/Scenes/LoadingScene.js",
+        "src/Managers/CoinManager.js",
         "src/Scenes/GameScene.js"
 
     ]
