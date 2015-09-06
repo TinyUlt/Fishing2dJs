@@ -1,0 +1,193 @@
+{
+  "ID": "3b7b3be4-79fd-41a3-a423-4535bd244cd6",
+  "Version": "2.3.0.1",
+  "Name": "LoadingScene",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 8,
+        "Children": [
+          {
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "StretchWidthEnable": true,
+            "StretchHeightEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 683.0,
+              "Y": 384.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "Tag": 9,
+            "Children": [
+              {
+                "IsCustomSize": true,
+                "FontSize": 72,
+                "LabelText": "",
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineSize": 0,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 0,
+                "ShadowOffsetY": 0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 682.9998,
+                  "Y": 387.3521
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5044
+                },
+                "PercentWidthEnable": true,
+                "PercentWidthEnabled": true,
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.1055
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": -0.0002,
+                "RightMargin": 0.0002,
+                "TopMargin": 340.1479,
+                "BottomMargin": 346.8521,
+                "Tag": 10,
+                "ActionTag": 1941671838,
+                "Size": {
+                  "X": 1366.0,
+                  "Y": 81.0
+                },
+                "Name": "Text_ArmatureLoading",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 72,
+                "LabelText": "",
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineSize": 0,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 0,
+                "ShadowOffsetY": 0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 692.9999,
+                  "Y": 479.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5073,
+                  "Y": 0.6237
+                },
+                "PercentWidthEnable": true,
+                "PercentWidthEnabled": true,
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.1055
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 9.9999,
+                "RightMargin": -10.0,
+                "TopMargin": 248.5,
+                "BottomMargin": 438.5,
+                "Tag": 8,
+                "ActionTag": 652761520,
+                "Size": {
+                  "X": 1366.0,
+                  "Y": 81.0
+                },
+                "Name": "Text_File",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -1052631524,
+            "Size": {
+              "X": 1366.0,
+              "Y": 768.0
+            },
+            "Name": "Panel_Main",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1366.0,
+          "Y": 768.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Scene"
+}

@@ -8,6 +8,16 @@
           <Image Name="normal_map0.png" />
         </Folder>
         <Project Name="LoadingScene.csd" Type="Scene" />
+        <Folder Name="Battery">
+          <Image Name="turret_front.png" />
+          <Image Name="turret0.png" />
+          <Image Name="turret1.png" />
+          <Image Name="turret2.png" />
+          <Image Name="turret3.png" />
+          <Image Name="turret4.png" />
+          <Image Name="turret5.png" />
+          <Image Name="gun02_double.png" />
+        </Folder>
       </RootFolder>
     </Group>
   </SolutionFolder>
