@@ -109,9 +109,21 @@ var GameLayer = (function(){
              GlobalVariables.currentFishManager = this.fishManager;
 
 
-             //this.schedule(this.createFish, 1);
+             this.schedule(this.createFish, 1);
 
-             this.createFish(1);
+
+             cc.eventManager.addListener({
+                 event: cc.EventListener.TOUCH_ONE_BY_ONE,
+                 swallowTouches: true,
+                 onTouchBegan: this.onTouchBegan,
+                 onTouchMoved: this.onTouchMoved,
+                 onTouchEnded: this.onTouchEnded
+             }, this);
+
+
+
+
+             //this.createFish(1);
          },
          update:function(dt){
              //cc.log("qwe");
@@ -123,7 +135,36 @@ var GameLayer = (function(){
 
              var swim = new SBSwim(createRandomPath(),true, 0);
              this.swimManager.setFishSwim(fish, swim);
-         }
+         },
+         onTouchBegan:function (touch, event) {
+             var target = event.getCurrentTarget();
+             var touchPoint = touch.getLocation();
+             var bullet = new Bullet;
+             //bullet.setPosition(touchPoint);
+             target.addChild(bullet);
+
+             bullet.fly({
+                 bulletID:0,
+                 chairID:0,
+                 startPoint:cc.p(300,300),
+                 endPoint:FitSolution.screenToDesigned(touchPoint),
+                 pastTime:0,
+                 multiple:0,
+                 speed:300,
+                 lockID:0,
+                 deleteTime:-1,
+                 lockFish:null
+             });
+
+             return true;
+         },
+         onTouchMoved:function (touch, event) {
+             var target = event.getCurrentTarget();
+             var touchPoint = touch.getLocation();
+         },
+         onTouchEnded:function (touch, event) {
+             var target = event.getCurrentTarget();
+         },
      })
 
 

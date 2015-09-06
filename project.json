@@ -21,7 +21,8 @@
         "src/Managers/FishManager.js",
         "src/Units/Swim.js",
         "src/Units/SBSwim.js",
-        "src/Managers/SwimManager.js"
+        "src/Managers/SwimManager.js",
+        "src/Units/Bullet.js"
 
     ]
 }

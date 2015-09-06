@@ -70,11 +70,12 @@
 
 var LoadingLayer = (function(){
 
-    var ArmatureCurrentCount = 0;
 
     return cc.Layer.extend({
         loadingsceneNode:null,
-        allResCount:null,
+
+        preLoadingFileCurrentCount:0,
+        preLoadingAramtureCurrentCount:0,
         ctor: function () {
             //////////////////////////////
             // 1. super init first
@@ -87,47 +88,41 @@ var LoadingLayer = (function(){
             FitSolution.fitUI(loadingscene.node,GlobalVariables.loadingSceneNeedFit);
             this.loadingsceneNode = loadingscene.node;
 
-            this.scheduleUpdate();
-            allResCount = GlobalVariables.fishConfig.length * 4;
+            this.schedule(this.preFileUpdate);
+            //this.schedule(this.loadingAramtureUpdate);
+            //this.scheduleUpdate();
+
+            //cc.log(GlobalVariables.AllPreLoadFile.length);
         },
-        update:function(dt){
-            cc.log("qwe");
-            if(ArmatureCurrentCount < GlobalVariables.fishConfig.length){
-                var fishObj = GlobalVariables.fishConfig[ArmatureCurrentCount];
-                cc.loader.load(fishObj.ExportJsonPath);
-                ArmatureCurrentCount++;
-                var label = ccui.helper.seekWidgetByName(this.loadingsceneNode, "Text_Loading");
-                label.setString("current percent : " + ((ArmatureCurrentCount )/allResCount.toFixed(2) * 100));
-
-            }else if(ArmatureCurrentCount < GlobalVariables.fishConfig.length * 2){
-                var fishObj = GlobalVariables.fishConfig[ArmatureCurrentCount - GlobalVariables.fishConfig.length * 1];
-                cc.loader.load(fishObj.PlistPath);
-
-                ArmatureCurrentCount++;
-                var label = ccui.helper.seekWidgetByName(this.loadingsceneNode, "Text_Loading");
-                label.setString("current percent : " + ((ArmatureCurrentCount )/allResCount.toFixed(2) * 100));
-
-            } else if(ArmatureCurrentCount < GlobalVariables.fishConfig.length * 3){
-                var fishObj = GlobalVariables.fishConfig[ArmatureCurrentCount - GlobalVariables.fishConfig.length*2];
-                cc.loader.load(fishObj.PngPath);
-
-                ArmatureCurrentCount++;
-                var label = ccui.helper.seekWidgetByName(this.loadingsceneNode, "Text_Loading");
-                label.setString("current percent : " + ((ArmatureCurrentCount )/allResCount.toFixed(2) * 100));
-
-            }else  if(ArmatureCurrentCount < GlobalVariables.fishConfig.length * 4){
-                var fishObj = GlobalVariables.fishConfig[ArmatureCurrentCount - GlobalVariables.fishConfig.length*3];
-                var armatureDataManager = ccs.armatureDataManager;
-                armatureDataManager.addArmatureFileInfo(fishObj.ExportJsonPath);
-                var label = ccui.helper.seekWidgetByName(this.loadingsceneNode, "Text_Loading");
-                ArmatureCurrentCount++;
-                label.setString("current percent : " + ((ArmatureCurrentCount )/allResCount.toFixed(2) * 100));
+        preFileUpdate:function(dt){
+            if(this.preLoadingFileCurrentCount >= GlobalVariables.AllPreLoadFile.length){
+                this.unschedule(this.preFileUpdate);
+                this.schedule(this.loadingAramtureUpdate);
+                return;
             }
-            else{
-                this.unschedule();
+
+            cc.loader.load(GlobalVariables.AllPreLoadFile[this.preLoadingFileCurrentCount]);
+
+            this.preLoadingFileCurrentCount++;
+            var label = ccui.helper.seekWidgetByName(this.loadingsceneNode, "Text_File");
+            label.setString("Loading file percent : " + (((this.preLoadingFileCurrentCount )/GlobalVariables.AllPreLoadFile.length).toFixed(2) * 100)+"%");
+        },
+        loadingAramtureUpdate:function(dt){
+
+            if(this.preLoadingAramtureCurrentCount >= GlobalVariables.AllExportJson.length){
+                this.unschedule(this.loadingAramtureUpdate);
+                this.loadingDoen();
+                return;
+            }
+            ccs.armatureDataManager.addArmatureFileInfo(GlobalVariables.AllExportJson[this.preLoadingAramtureCurrentCount]);
+            this.preLoadingAramtureCurrentCount++;
+            var label = ccui.helper.seekWidgetByName(this.loadingsceneNode, "Text_ArmatureLoading");
+            label.setString("Loading fish percent : " + (((this.preLoadingAramtureCurrentCount )/GlobalVariables.AllExportJson.length).toFixed(2) * 100)+ "%");
+        },
+        loadingDoen:function(){
+            //if(this.preLoadingArmatureDone == true && this.preLoadingArmatureDone == true){
                 cc.loader.load(GameScene_json,function(){cc.log("ok")},function(){cc.director.runScene(new GameScene())});
-
-            }
+            //}
         }
     })
 

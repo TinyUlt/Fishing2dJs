@@ -1,23 +1,39 @@
 (function(_G){
-	var resolutionSize = null;
-	var	screen_designed_width_rate = null;
-	var	screen_designed_height_rate = null;
+	var resolutionSize = cc.size(0,0);
+	var design_width_height_rate = 1.0;
+	var	screen_designed_width_rate = 1;
+	var	screen_designed_height_rate = 1;
 	var UIFitType = {
 			UnKown:0,
 			ShowAll:1,
 			NoBoard:2,
 			ByHeight:3,
-			ByWidth:4
+			ByWidth:4,
+			AllFit:5
 	};
+
 	function init(designWidth, designHeight){
+		resolutionSize = cc.size(designWidth, designHeight);
+		cc.log(resolutionSize);
+		design_width_height_rate = designWidth / designHeight;
 		var screenSize = cc.view.getFrameSize();
+		var rate = 2;
+		if(screenSize.width / screenSize.height > design_width_height_rate * rate){
+			screenSize.width = design_width_height_rate * rate * screenSize.height;
+		}
+		if(screenSize.width / screenSize.height < design_width_height_rate / rate){
+			screenSize.height = screenSize.width / design_width_height_rate * rate ;
+		}
 		cc.view.setDesignResolutionSize(screenSize.width, screenSize.height, cc.ResolutionPolicy.SHOW_ALL);
 
 		setScreen_designed_rate(screenSize, new cc.size(designWidth, designHeight));
 	};
+	function getResolutionSize(){
+		return resolutionSize;
+	}
 	function fitUI(node, config){
 
-		var screenSize = cc.view.getFrameSize();
+		var screenSize = cc.director.getWinSize();
 		node.setContentSize(screenSize);
 		ccui.helper.doLayout(node);
 
@@ -88,6 +104,7 @@
 		return cc.p(point.x / screen_designed_width_rate, point.y / screen_designed_height_rate)
 	}
 	_G.FitSolution = {
+
 		UIFitType:UIFitType,
 		init:init,
 		fitUI:fitUI,
@@ -97,6 +114,7 @@
 		scaleRateByWidth:scaleRateByWidth,
 		designedToScreen:designedToScreen,
 		screenToDesigned:screenToDesigned,
+		getResolutionSize:getResolutionSize,
 	}
 })(this)
 

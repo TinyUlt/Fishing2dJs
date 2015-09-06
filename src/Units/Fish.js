@@ -9,6 +9,7 @@ var Fish = cc.Sprite.extend({
     oldPosition:cc.p(0,0),
     draw:null,
     bound:null,
+    isDead:false,
     ctor:function(type){
         this._super();
         this.type = type;
@@ -21,7 +22,7 @@ var Fish = cc.Sprite.extend({
 
         this.bound = GlobalVariables.fishConfig[this.type].bounding;
         //this.drawCircle();
-        this.drawCollision();
+        //this.drawCollision();
 
 
         this.scheduleUpdate();
@@ -32,7 +33,7 @@ var Fish = cc.Sprite.extend({
         this.setPosition(newPosition);
         //cc.log(FitSolution.scaleRateShowAll);
         this.setScale(FitSolution.scaleRateShowAll());
-        
+
         var a = cc.pSub(this.oldPosition,newPosition);
         var b = cc.radiansToDegrees(Math.atan2(a.x, a.y));
         if(b != 0){
@@ -72,6 +73,6 @@ var Fish = cc.Sprite.extend({
         return array;
     },
     update:function(dt){
-        this.drawCollision();
+        //this.drawCollision();
     }
 })
