@@ -3,20 +3,20 @@
  */
 function CollisionManager(){
     this.update = function(){
-        for(var j = 0; j < GlobalVariables.currentBulletManager.bulletArray.length; j ++){
-            var bullet = GlobalVariables.currentBulletManager.bulletArray[j];
+        for(var j = 0; j < GlobalVariables.managers.currentBulletManager.bulletArray.length; j ++){
+            var bullet = GlobalVariables.managers.currentBulletManager.bulletArray[j];
             var bulletPosition = FitSolution.screenToDesigned(bullet.getPosition());
-            for(var i = 0; i < GlobalVariables.currentFishManager.fishArray.length; i ++){
-                var fish = GlobalVariables.currentFishManager.fishArray[i];
+            for(var i = 0; i < GlobalVariables.managers.currentFishManager.fishArray.length; i ++){
+                var fish = GlobalVariables.managers.currentFishManager.fishArray[i];
                 var boundArray = fish.getCollisionBound();
                 for(var k = 0; k < boundArray.length; k ++){
                     var bound = boundArray[k];
                     var distance = cc.pDistance(bound.p, bulletPosition);
                     if(distance < bound.r){
                         cc.log("hit");
-                        GlobalVariables.currentSwimManager.destroySwim(fish);
-                        GlobalVariables.currentFishManager.destroyFish(fish, true);
-                        GlobalVariables.currentBulletManager.destroyBullet(bullet);
+                        GlobalVariables.managers.currentSwimManager.destroySwim(fish);
+                        GlobalVariables.managers.currentFishManager.destroyFish(fish, true);
+                        GlobalVariables.managers.currentBulletManager.destroyBullet(bullet);
                     }
                 }
             }

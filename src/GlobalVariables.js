@@ -241,6 +241,16 @@
 
 
     var swimTimeDt = (1/60.0);
+    var kGunPos = [
+        { x:326.5, y:768 - 70.0 },
+        { x:757.5, y:768 - 70.0 },
+        { x:1188.5, y:768 - 70.0 },
+        { x:1039.50, y:768 - 685.0 },
+        { x:608.5, y:768 - 685.0 },
+        { x:177.5, y:768 - 685 }
+    ];
+
+
     _G.GlobalVariables = {
         designWidth : 1366,    // 屏宽
         designHeight : 768,    // 屏高
@@ -252,12 +262,17 @@
         bulletConfig: bulletConfig,
         SwimType : SwimType,
         swimTimeDt : swimTimeDt,
-        currentFishManager:null,
-        currentBulletManager:null,
-        currentSwimManager:null,
+        managers:{
+            currentFishManager:null,
+            currentBulletManager:null,
+            currentSwimManager:null,
+            currentPlayerManager:null,
+            currentCollisionManaget:null,
+        },
         currentGameLayer:null,
         AllPreLoadFile:AllPreLoadFile,
-        AllExportJson:AllExportJson
+        AllExportJson:AllExportJson,
+        kGunPos:kGunPos
     }
 
 })(this)

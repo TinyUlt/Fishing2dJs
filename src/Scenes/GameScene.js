@@ -67,10 +67,13 @@ var GameLayer = (function(){
      return cc.Layer.extend({
          sprite: null,
          Panel_help: null,
-         swimManager:null,
-         fishManager:null,
-         bulletManager:null,
-         collisionManaget:null,
+
+         UILayers:{
+             fish:null,
+             bullet:null,
+             coin:null
+         },
+         playerManager:null,
          ctor: function () {
              //////////////////////////////
              // 1. super init first
@@ -104,15 +107,13 @@ var GameLayer = (function(){
 
              this.scheduleUpdate();
 
-             this.swimManager = new SwimManager();
-             this.fishManager = new FishManager();
-             this.bulletManager = new BulletManager();
-             this.collisionManaget = new CollisionManager();
-             GlobalVariables.currentGameLayer = this;
-             GlobalVariables.currentFishManager = this.fishManager;
-             GlobalVariables.currentBulletManager = this.bulletManager;
-             GlobalVariables.currentSwimManager = this.swimManager;
 
+             GlobalVariables.managers.currentGameLayer = this;
+             GlobalVariables.managers.currentFishManager = new FishManager();
+             GlobalVariables.managers.currentBulletManager =new BulletManager();
+             GlobalVariables.managers.currentSwimManager =  new SwimManager();
+             GlobalVariables.managers.currentPlayerManager = new PlayerManager();
+             GlobalVariables.managers.currentCollisionManaget = new CollisionManager();
              this.schedule(this.createFish, 1);
 
              cc.eventManager.addListener({
@@ -128,28 +129,32 @@ var GameLayer = (function(){
              //this.addChild(fish);
              //fish.x = 300;
              //fish.y = 400;
+
+             var Panel_turret = ccui.helper.seekWidgetByName(mainscene.node, "Panel_turret5");
+             GlobalVariables.managers.currentPlayerManager.initPlayer(5, Panel_turret);
          },
          update:function(dt){
 
-             this.swimManager.update(dt);
-             this.collisionManaget.update(dt);
+             GlobalVariables.managers.currentSwimManager.update(dt);
+             GlobalVariables.managers.currentCollisionManaget.update(dt);
          },
          createFish:function(dt){
-             var fish = this.fishManager.createFish(GlobalVariables.fishKind.FISH_JIANYU);
+             var fish = GlobalVariables.managers.currentFishManager.createFish(GlobalVariables.fishKind.FISH_JIANYU);
              this.addChild(fish);
 
              var swim = new SBSwim(createRandomPath(),true, 0);
-             this.swimManager.setFishSwim(fish, swim);
+             GlobalVariables.managers.currentSwimManager.setFishSwim(fish, swim);
          },
          onTouchBegan:function (touch, event) {
              var target = event.getCurrentTarget();
              var touchPoint = touch.getLocation();
              var endPoint = FitSolution.screenToDesigned(touchPoint);
-             var bullet = target.bulletManager.createBullet({
+             var startPoint =cc.p(GlobalVariables.kGunPos[5].x, GlobalVariables.kGunPos[5].y);
+             var bullet = GlobalVariables.managers.currentBulletManager.createBullet({
                  type:GlobalVariables.bulletKind.bullet1,
                  bulletID:0,
                  chairID:0,
-                 startPoint:cc.p(300,300),
+                 startPoint:startPoint,
                  endPoint:endPoint,
                  pastTime:0,
                  multiple:0,
@@ -160,6 +165,8 @@ var GameLayer = (function(){
              });
 
              target.addChild(bullet);
+
+             GlobalVariables.managers.currentPlayerManager.setGaunBarrelAngle(5,touchPoint);
              return true;
          },
          onTouchMoved:function (touch, event) {

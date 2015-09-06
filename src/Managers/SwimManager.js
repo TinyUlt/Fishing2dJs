@@ -16,7 +16,7 @@ function SwimManager(){
 
             }else{//结束
                 //swim.target.removeFromParent(true);
-                GlobalVariables.currentFishManager.destroyFish(swim.target, false);
+                GlobalVariables.managers.currentFishManager.destroyFish(swim.target, false);
                 this.swimArray.splice(i,1);
             }
         }
