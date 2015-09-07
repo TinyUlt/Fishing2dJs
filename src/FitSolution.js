@@ -102,7 +102,22 @@
 	}
 	function screenToDesigned(point){
 		return cc.p(point.x / screen_designed_width_rate, point.y / screen_designed_height_rate)
+	};
+	function setCSBPosition(layout, position){
+		var cloneComponent = ccui.LayoutComponent.bindLayoutComponent(layout);
+		cloneComponent.setHorizontalEdge(ccui.LayoutComponent.horizontalEdge.LEFT);
+		cloneComponent.setPositionPercentXEnabled(true);
+		cloneComponent.setPositionPercentYEnabled(true);
+		var p = designedPointToPercent(position);
+		cloneComponent.setPositionPercentX(p.x);
+		cloneComponent.setPositionPercentY(p.y);
+	};
+	function designedPointToPercent(point){
+		var x = point.x / resolutionSize.width;
+		var y = point.y / resolutionSize.height;
+		return cc.p(x,y);
 	}
+
 	_G.FitSolution = {
 
 		UIFitType:UIFitType,
@@ -115,6 +130,8 @@
 		designedToScreen:designedToScreen,
 		screenToDesigned:screenToDesigned,
 		getResolutionSize:getResolutionSize,
+		setCSBPosition:setCSBPosition,
+		designedPointToPercent:designedPointToPercent
 	}
 })(this)
 

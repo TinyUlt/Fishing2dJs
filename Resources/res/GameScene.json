@@ -176,6 +176,8 @@
                 },
                 "CColor": {},
                 "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
                 "PrePosition": {
                   "X": 0.5,
                   "Y": 0.5
@@ -184,8 +186,6 @@
                   "X": 1.0,
                   "Y": 1.0
                 },
-                "HorizontalEdge": "BothEdge",
-                "VerticalEdge": "BothEdge",
                 "Tag": 9,
                 "ActionTag": 1980300861,
                 "Size": {
@@ -218,8 +218,59 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 692.9999,
-                  "Y": 374.0
+                  "X": 683.0,
+                  "Y": 384.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 1.0
+                },
+                "Tag": 12,
+                "ActionTag": 426285720,
+                "Size": {
+                  "X": 1366.0,
+                  "Y": 768.0
+                },
+                "Name": "Panel_Bullet",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "BackColorAlpha": 102,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "StretchWidthEnable": true,
+                "StretchHeightEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 683.0,
+                  "Y": 768.0336
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -228,26 +279,903 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.5073,
-                  "Y": 0.487
+                  "X": 0.5,
+                  "Y": 1.0
                 },
                 "PreSize": {
                   "X": 1.0,
-                  "Y": 1.0
+                  "Y": 0.0391
                 },
                 "HorizontalEdge": "BothEdge",
-                "VerticalEdge": "BothEdge",
-                "LeftMargin": 9.9999,
-                "RightMargin": -9.9999,
-                "TopMargin": 10.0,
-                "BottomMargin": -10.0,
-                "Tag": 12,
-                "ActionTag": 426285720,
+                "VerticalEdge": "TopEdge",
+                "TopMargin": -0.0336,
+                "BottomMargin": 738.0336,
+                "Tag": 28,
+                "Children": [
+                  {
+                    "BackColorAlpha": 102,
+                    "ComboBoxIndex": 1,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": 326.5,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.239,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.1464,
+                      "Y": 9.0785
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "BottomEdge",
+                    "LeftMargin": 226.5,
+                    "RightMargin": 939.5,
+                    "TopMargin": 22.03,
+                    "BottomMargin": -200.0,
+                    "Tag": 29,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Battery/turret0.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 209,
+                        "Scale9Height": 94,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 1.0
+                        },
+                        "Position": {
+                          "X": 100.0,
+                          "Y": 200.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 1.0
+                        },
+                        "PreSize": {
+                          "X": 1.045,
+                          "Y": 0.47
+                        },
+                        "LeftMargin": -4.5,
+                        "RightMargin": -4.5,
+                        "BottomMargin": 106.0,
+                        "Tag": 30,
+                        "ActionTag": 1072903780,
+                        "Size": {
+                          "X": 209.0,
+                          "Y": 94.0
+                        },
+                        "Name": "Image_8",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "BackColorAlpha": 102,
+                        "ComboBoxIndex": 1,
+                        "SingleColor": {
+                          "R": 150,
+                          "G": 200
+                        },
+                        "FirstColor": {
+                          "R": 150,
+                          "G": 200
+                        },
+                        "EndColor": {},
+                        "ColorVector": {
+                          "ScaleY": 1.0
+                        },
+                        "Scale9Width": 1,
+                        "Scale9Height": 1,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5
+                        },
+                        "Position": {
+                          "X": 100.0,
+                          "Y": 148.11
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "Rotation": 180.0,
+                        "RotationSkewX": 180.0,
+                        "RotationSkewY": 180.0,
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.7405
+                        },
+                        "PreSize": {
+                          "X": 0.283,
+                          "Y": 0.55
+                        },
+                        "LeftMargin": 61.0,
+                        "RightMargin": 61.0,
+                        "TopMargin": -58.11,
+                        "BottomMargin": 148.11,
+                        "Tag": 37,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "Battery/gun02_double.png",
+                              "Plist": ""
+                            },
+                            "Scale9Width": 78,
+                            "Scale9Height": 110,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5
+                            },
+                            "Position": {
+                              "X": 39.0,
+                              "Y": 0.0
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PrePosition": {
+                              "X": 0.5,
+                              "Y": 0.0
+                            },
+                            "PreSize": {
+                              "X": 0.195,
+                              "Y": 0.55
+                            },
+                            "Tag": 38,
+                            "ActionTag": 1609669031,
+                            "Size": {
+                              "X": 78.0,
+                              "Y": 110.0
+                            },
+                            "Name": "Image_GunBarrel_16",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -1012430428,
+                        "Size": {
+                          "X": 78.0,
+                          "Y": 110.0
+                        },
+                        "Name": "Panel_GunBarrel",
+                        "ctype": "PanelObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Battery/money_back0.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 149,
+                        "Scale9Height": 46,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": -70.753,
+                          "Y": 154.5066
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": -0.3538,
+                          "Y": 0.7725
+                        },
+                        "PreSize": {
+                          "X": 0.75,
+                          "Y": 0.2
+                        },
+                        "LeftMargin": -145.753,
+                        "RightMargin": 195.753,
+                        "TopMargin": 25.4934,
+                        "BottomMargin": 134.5066,
+                        "Tag": 25,
+                        "ActionTag": 1958670824,
+                        "Size": {
+                          "X": 150.0,
+                          "Y": 40.0
+                        },
+                        "Name": "Image_2",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FontSize": 20,
+                        "LabelText": "Text Label",
+                        "HorizontalAlignmentType": "HT_Center",
+                        "OutlineSize": 0,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 0,
+                        "ShadowOffsetY": 0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": -75.3443,
+                          "Y": 155.2068
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": -0.3767,
+                          "Y": 0.776
+                        },
+                        "PreSize": {
+                          "X": 0.3301,
+                          "Y": 0.115
+                        },
+                        "LeftMargin": -120.8443,
+                        "RightMargin": 229.8443,
+                        "TopMargin": 33.2932,
+                        "BottomMargin": 143.7068,
+                        "Tag": 26,
+                        "ActionTag": -1710327406,
+                        "Size": {
+                          "X": 91.0,
+                          "Y": 23.0
+                        },
+                        "Name": "Text_CoinShow",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": -1081398408,
+                    "Size": {
+                      "X": 200.0,
+                      "Y": 200.0
+                    },
+                    "Name": "Panel_turret0",
+                    "ctype": "PanelObjectData"
+                  },
+                  {
+                    "BackColorAlpha": 102,
+                    "ComboBoxIndex": 1,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": 757.5,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5545,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.1464,
+                      "Y": 10.0
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "BottomEdge",
+                    "LeftMargin": 657.5,
+                    "RightMargin": 508.5,
+                    "TopMargin": 22.03,
+                    "BottomMargin": -200.0,
+                    "Tag": 27,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Battery/turret1.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 209,
+                        "Scale9Height": 94,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 1.0
+                        },
+                        "Position": {
+                          "X": 100.0,
+                          "Y": 200.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 1.0
+                        },
+                        "PreSize": {
+                          "X": 1.045,
+                          "Y": 0.47
+                        },
+                        "LeftMargin": -4.5,
+                        "RightMargin": -4.5,
+                        "BottomMargin": 106.0,
+                        "Tag": 28,
+                        "ActionTag": -732127523,
+                        "Size": {
+                          "X": 209.0,
+                          "Y": 94.0
+                        },
+                        "Name": "Image_8_4",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "BackColorAlpha": 102,
+                        "ComboBoxIndex": 1,
+                        "SingleColor": {
+                          "R": 150,
+                          "G": 200
+                        },
+                        "FirstColor": {
+                          "R": 150,
+                          "G": 200
+                        },
+                        "EndColor": {},
+                        "ColorVector": {
+                          "ScaleY": 1.0
+                        },
+                        "Scale9Width": 1,
+                        "Scale9Height": 1,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5
+                        },
+                        "Position": {
+                          "X": 100.0,
+                          "Y": 148.11
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "Rotation": 180.0,
+                        "RotationSkewX": 180.0,
+                        "RotationSkewY": 180.0,
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.7405
+                        },
+                        "PreSize": {
+                          "X": 0.283,
+                          "Y": 0.55
+                        },
+                        "LeftMargin": 61.0,
+                        "RightMargin": 61.0,
+                        "TopMargin": -58.11,
+                        "BottomMargin": 148.11,
+                        "Tag": 29,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "Battery/gun02_double.png",
+                              "Plist": ""
+                            },
+                            "Scale9Width": 78,
+                            "Scale9Height": 110,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5
+                            },
+                            "Position": {
+                              "X": 39.0,
+                              "Y": 0.0
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PrePosition": {
+                              "X": 0.5,
+                              "Y": 0.0
+                            },
+                            "PreSize": {
+                              "X": 0.195,
+                              "Y": 0.55
+                            },
+                            "Tag": 30,
+                            "ActionTag": 187123581,
+                            "Size": {
+                              "X": 78.0,
+                              "Y": 110.0
+                            },
+                            "Name": "Image_GunBarrel_16_6",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": 1675252783,
+                        "Size": {
+                          "X": 78.0,
+                          "Y": 110.0
+                        },
+                        "Name": "Panel_GunBarrel",
+                        "ctype": "PanelObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Battery/money_back1.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 149,
+                        "Scale9Height": 46,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": -70.753,
+                          "Y": 154.5066
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": -0.3538,
+                          "Y": 0.7725
+                        },
+                        "PreSize": {
+                          "X": 0.745,
+                          "Y": 0.23
+                        },
+                        "LeftMargin": -145.253,
+                        "RightMargin": 196.253,
+                        "TopMargin": 22.4934,
+                        "BottomMargin": 131.5066,
+                        "Tag": 31,
+                        "ActionTag": 1496995203,
+                        "Size": {
+                          "X": 149.0,
+                          "Y": 46.0
+                        },
+                        "Name": "Image_2_8",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FontSize": 20,
+                        "LabelText": "Text Label",
+                        "HorizontalAlignmentType": "HT_Center",
+                        "OutlineSize": 0,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 0,
+                        "ShadowOffsetY": 0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": -75.3443,
+                          "Y": 155.2068
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": -0.3767,
+                          "Y": 0.776
+                        },
+                        "PreSize": {
+                          "X": 0.3301,
+                          "Y": 0.115
+                        },
+                        "LeftMargin": -120.8443,
+                        "RightMargin": 229.8443,
+                        "TopMargin": 33.2932,
+                        "BottomMargin": 143.7068,
+                        "Tag": 32,
+                        "ActionTag": -1325329298,
+                        "Size": {
+                          "X": 91.0,
+                          "Y": 23.0
+                        },
+                        "Name": "Text_CoinShow",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": -1142414075,
+                    "Size": {
+                      "X": 200.0,
+                      "Y": 200.0
+                    },
+                    "Name": "Panel_turret1",
+                    "ctype": "PanelObjectData"
+                  },
+                  {
+                    "BackColorAlpha": 102,
+                    "ComboBoxIndex": 1,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": 1188.5,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8701,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.1464,
+                      "Y": 10.0
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "BottomEdge",
+                    "LeftMargin": 1088.5,
+                    "RightMargin": 77.5,
+                    "TopMargin": 30.0,
+                    "BottomMargin": -200.0,
+                    "Tag": 33,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Battery/turret2.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 209,
+                        "Scale9Height": 94,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 1.0
+                        },
+                        "Position": {
+                          "X": 100.0,
+                          "Y": 200.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 1.0
+                        },
+                        "PreSize": {
+                          "X": 1.045,
+                          "Y": 0.47
+                        },
+                        "LeftMargin": -4.5,
+                        "RightMargin": -4.5,
+                        "BottomMargin": 106.0,
+                        "Tag": 34,
+                        "ActionTag": 1740005211,
+                        "Size": {
+                          "X": 209.0,
+                          "Y": 94.0
+                        },
+                        "Name": "Image_8_4_10",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "BackColorAlpha": 102,
+                        "ComboBoxIndex": 1,
+                        "SingleColor": {
+                          "R": 150,
+                          "G": 200
+                        },
+                        "FirstColor": {
+                          "R": 150,
+                          "G": 200
+                        },
+                        "EndColor": {},
+                        "ColorVector": {
+                          "ScaleY": 1.0
+                        },
+                        "Scale9Width": 1,
+                        "Scale9Height": 1,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5
+                        },
+                        "Position": {
+                          "X": 100.0,
+                          "Y": 148.11
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "Rotation": 180.0,
+                        "RotationSkewX": 180.0,
+                        "RotationSkewY": 180.0,
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.7405
+                        },
+                        "PreSize": {
+                          "X": 0.283,
+                          "Y": 0.55
+                        },
+                        "LeftMargin": 61.0,
+                        "RightMargin": 61.0,
+                        "TopMargin": -58.11,
+                        "BottomMargin": 148.11,
+                        "Tag": 35,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "Battery/gun02_double.png",
+                              "Plist": ""
+                            },
+                            "Scale9Width": 78,
+                            "Scale9Height": 110,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5
+                            },
+                            "Position": {
+                              "X": 39.0,
+                              "Y": 0.0
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PrePosition": {
+                              "X": 0.5,
+                              "Y": 0.0
+                            },
+                            "PreSize": {
+                              "X": 0.195,
+                              "Y": 0.55
+                            },
+                            "Tag": 36,
+                            "ActionTag": 1431620613,
+                            "Size": {
+                              "X": 78.0,
+                              "Y": 110.0
+                            },
+                            "Name": "Image_GunBarrel_16_6_12",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -1577516515,
+                        "Size": {
+                          "X": 78.0,
+                          "Y": 110.0
+                        },
+                        "Name": "Panel_GunBarrel",
+                        "ctype": "PanelObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Battery/money_back2.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 149,
+                        "Scale9Height": 46,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": -70.753,
+                          "Y": 154.5066
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": -0.3538,
+                          "Y": 0.7725
+                        },
+                        "PreSize": {
+                          "X": 0.745,
+                          "Y": 0.23
+                        },
+                        "LeftMargin": -145.253,
+                        "RightMargin": 196.253,
+                        "TopMargin": 22.4934,
+                        "BottomMargin": 131.5066,
+                        "Tag": 37,
+                        "ActionTag": 297611711,
+                        "Size": {
+                          "X": 149.0,
+                          "Y": 46.0
+                        },
+                        "Name": "Image_2_8_14",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FontSize": 20,
+                        "LabelText": "Text Label",
+                        "HorizontalAlignmentType": "HT_Center",
+                        "OutlineSize": 0,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 0,
+                        "ShadowOffsetY": 0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": -75.3443,
+                          "Y": 155.2068
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": -0.3767,
+                          "Y": 0.776
+                        },
+                        "PreSize": {
+                          "X": 0.3301,
+                          "Y": 0.115
+                        },
+                        "LeftMargin": -120.8443,
+                        "RightMargin": 229.8443,
+                        "TopMargin": 33.2932,
+                        "BottomMargin": 143.7068,
+                        "Tag": 38,
+                        "ActionTag": -1865456462,
+                        "Size": {
+                          "X": 91.0,
+                          "Y": 23.0
+                        },
+                        "Name": "Text_CoinShow",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": 1209971430,
+                    "Size": {
+                      "X": 200.0,
+                      "Y": 200.0
+                    },
+                    "Name": "Panel_turret2",
+                    "ctype": "PanelObjectData"
+                  }
+                ],
+                "ActionTag": 734554771,
                 "Size": {
                   "X": 1366.0,
-                  "Y": 768.0
+                  "Y": 30.0
                 },
-                "Name": "Panel_Bullet",
+                "Name": "Panel_Top",
                 "ctype": "PanelObjectData"
               },
               {
@@ -314,8 +1242,8 @@
                       "ScaleX": 0.5
                     },
                     "Position": {
-                      "X": 176.0774,
-                      "Y": 26.0
+                      "X": 177.5,
+                      "Y": 26.0352
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -324,7 +1252,7 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.1289,
+                      "X": 0.1299,
                       "Y": 1.0
                     },
                     "PreSize": {
@@ -333,10 +1261,10 @@
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "TopEdge",
-                    "LeftMargin": 38.248,
-                    "RightMargin": 1052.0933,
+                    "LeftMargin": 39.6706,
+                    "RightMargin": 1050.6707,
                     "TopMargin": -200.0,
-                    "BottomMargin": 26.0,
+                    "BottomMargin": 26.0352,
                     "Tag": 10,
                     "Children": [
                       {
@@ -475,9 +1403,53 @@
                         "ctype": "PanelObjectData"
                       },
                       {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Battery/money_back5.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 149,
+                        "Scale9Height": 46,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 297.61,
+                          "Y": 45.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 1.0796,
+                          "Y": 0.225
+                        },
+                        "PreSize": {
+                          "X": 0.5442,
+                          "Y": 0.2
+                        },
+                        "LeftMargin": 222.61,
+                        "RightMargin": -96.9512,
+                        "TopMargin": 135.0,
+                        "BottomMargin": 25.0,
+                        "Tag": 26,
+                        "ActionTag": -1953470104,
+                        "Size": {
+                          "X": 150.0,
+                          "Y": 40.0
+                        },
+                        "Name": "Image_6",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
                         "FontSize": 20,
                         "LabelText": "Text Label",
                         "HorizontalAlignmentType": "HT_Center",
+                        "OutlineSize": 0,
                         "OutlineColor": {
                           "G": 0,
                           "B": 0
@@ -487,13 +1459,15 @@
                           "G": 110,
                           "B": 110
                         },
+                        "ShadowOffsetX": 0,
+                        "ShadowOffsetY": 0,
                         "AnchorPoint": {
                           "ScaleX": 0.5,
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 137.8294,
-                          "Y": 44.56
+                          "X": 297.7115,
+                          "Y": 43.56
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -503,17 +1477,17 @@
                         "IconVisible": false,
                         "PositionPercentXEnabled": true,
                         "PrePosition": {
-                          "X": 0.5,
-                          "Y": 0.2228
+                          "X": 1.08,
+                          "Y": 0.2178
                         },
                         "PreSize": {
                           "X": 0.3301,
                           "Y": 0.115
                         },
-                        "LeftMargin": 92.3294,
-                        "RightMargin": 92.3294,
-                        "TopMargin": 143.94,
-                        "BottomMargin": 33.06,
+                        "LeftMargin": 252.2115,
+                        "RightMargin": -67.5527,
+                        "TopMargin": 144.94,
+                        "BottomMargin": 32.06,
                         "Tag": 15,
                         "ActionTag": 1546994116,
                         "Size": {
@@ -530,6 +1504,582 @@
                       "Y": 200.0
                     },
                     "Name": "Panel_turret5",
+                    "ctype": "PanelObjectData"
+                  },
+                  {
+                    "BackColorAlpha": 102,
+                    "ComboBoxIndex": 1,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5
+                    },
+                    "Position": {
+                      "X": 608.5,
+                      "Y": 26.0352
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.4455,
+                      "Y": 1.0
+                    },
+                    "PreSize": {
+                      "X": 0.2018,
+                      "Y": 7.6819
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "TopEdge",
+                    "LeftMargin": 470.6706,
+                    "RightMargin": 619.6706,
+                    "TopMargin": -200.0,
+                    "BottomMargin": 26.0352,
+                    "Tag": 39,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Battery/turret4.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 209,
+                        "Scale9Height": 94,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5
+                        },
+                        "Position": {
+                          "X": 137.8294,
+                          "Y": 0.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.0
+                        },
+                        "PreSize": {
+                          "X": 0.7582,
+                          "Y": 0.47
+                        },
+                        "LeftMargin": 33.3294,
+                        "RightMargin": 33.3294,
+                        "TopMargin": 106.0,
+                        "Tag": 40,
+                        "ActionTag": -1051297901,
+                        "Size": {
+                          "X": 209.0,
+                          "Y": 94.0
+                        },
+                        "Name": "Image_1_16",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "BackColorAlpha": 102,
+                        "ComboBoxIndex": 1,
+                        "SingleColor": {
+                          "R": 150,
+                          "G": 200
+                        },
+                        "FirstColor": {
+                          "R": 150,
+                          "G": 200
+                        },
+                        "EndColor": {},
+                        "ColorVector": {
+                          "ScaleY": 1.0
+                        },
+                        "Scale9Width": 1,
+                        "Scale9Height": 1,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5
+                        },
+                        "Position": {
+                          "X": 137.8294,
+                          "Y": 55.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.275
+                        },
+                        "PreSize": {
+                          "X": 0.283,
+                          "Y": 0.55
+                        },
+                        "LeftMargin": 98.8294,
+                        "RightMargin": 98.8294,
+                        "TopMargin": 35.0,
+                        "BottomMargin": 55.0,
+                        "Tag": 41,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "Battery/gun02_double.png",
+                              "Plist": ""
+                            },
+                            "Scale9Width": 78,
+                            "Scale9Height": 110,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5
+                            },
+                            "Position": {
+                              "X": 39.0,
+                              "Y": 0.0
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PrePosition": {
+                              "X": 0.5,
+                              "Y": 0.0
+                            },
+                            "PreSize": {
+                              "X": 0.195,
+                              "Y": 0.55
+                            },
+                            "Tag": 42,
+                            "ActionTag": 1156682094,
+                            "Size": {
+                              "X": 78.0,
+                              "Y": 110.0
+                            },
+                            "Name": "Image_GunBarrel_18",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -222904556,
+                        "Size": {
+                          "X": 78.0,
+                          "Y": 110.0
+                        },
+                        "Name": "Panel_GunBarrel",
+                        "ctype": "PanelObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Battery/money_back4.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 149,
+                        "Scale9Height": 46,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 297.61,
+                          "Y": 45.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 1.0796,
+                          "Y": 0.225
+                        },
+                        "PreSize": {
+                          "X": 0.5405,
+                          "Y": 0.23
+                        },
+                        "LeftMargin": 223.11,
+                        "RightMargin": -96.4512,
+                        "TopMargin": 132.0,
+                        "BottomMargin": 22.0,
+                        "Tag": 43,
+                        "ActionTag": 937031144,
+                        "Size": {
+                          "X": 149.0,
+                          "Y": 46.0
+                        },
+                        "Name": "Image_6_20",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FontSize": 20,
+                        "LabelText": "Text Label",
+                        "HorizontalAlignmentType": "HT_Center",
+                        "OutlineSize": 0,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 0,
+                        "ShadowOffsetY": 0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 297.7115,
+                          "Y": 43.56
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": 1.08,
+                          "Y": 0.2178
+                        },
+                        "PreSize": {
+                          "X": 0.3301,
+                          "Y": 0.115
+                        },
+                        "LeftMargin": 252.2115,
+                        "RightMargin": -67.5527,
+                        "TopMargin": 144.94,
+                        "BottomMargin": 32.06,
+                        "Tag": 44,
+                        "ActionTag": -538378803,
+                        "Size": {
+                          "X": 91.0,
+                          "Y": 23.0
+                        },
+                        "Name": "Text_CoinShow",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": 768827393,
+                    "Size": {
+                      "X": 275.6588,
+                      "Y": 200.0
+                    },
+                    "Name": "Panel_turret4",
+                    "ctype": "PanelObjectData"
+                  },
+                  {
+                    "BackColorAlpha": 102,
+                    "ComboBoxIndex": 1,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5
+                    },
+                    "Position": {
+                      "X": 1039.5,
+                      "Y": 26.0352
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.761,
+                      "Y": 1.0
+                    },
+                    "PreSize": {
+                      "X": 0.2018,
+                      "Y": 7.6819
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "TopEdge",
+                    "LeftMargin": 901.6706,
+                    "RightMargin": 188.6707,
+                    "TopMargin": -200.0,
+                    "BottomMargin": 26.0352,
+                    "Tag": 45,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Battery/turret3.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 209,
+                        "Scale9Height": 94,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5
+                        },
+                        "Position": {
+                          "X": 137.8294,
+                          "Y": 0.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.0
+                        },
+                        "PreSize": {
+                          "X": 0.7582,
+                          "Y": 0.47
+                        },
+                        "LeftMargin": 33.3294,
+                        "RightMargin": 33.3294,
+                        "TopMargin": 106.0,
+                        "Tag": 46,
+                        "ActionTag": 547853415,
+                        "Size": {
+                          "X": 209.0,
+                          "Y": 94.0
+                        },
+                        "Name": "Image_1_16_22",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "BackColorAlpha": 102,
+                        "ComboBoxIndex": 1,
+                        "SingleColor": {
+                          "R": 150,
+                          "G": 200
+                        },
+                        "FirstColor": {
+                          "R": 150,
+                          "G": 200
+                        },
+                        "EndColor": {},
+                        "ColorVector": {
+                          "ScaleY": 1.0
+                        },
+                        "Scale9Width": 1,
+                        "Scale9Height": 1,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5
+                        },
+                        "Position": {
+                          "X": 137.8294,
+                          "Y": 55.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.275
+                        },
+                        "PreSize": {
+                          "X": 0.283,
+                          "Y": 0.55
+                        },
+                        "LeftMargin": 98.8294,
+                        "RightMargin": 98.8294,
+                        "TopMargin": 35.0,
+                        "BottomMargin": 55.0,
+                        "Tag": 47,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "Battery/gun02_double.png",
+                              "Plist": ""
+                            },
+                            "Scale9Width": 78,
+                            "Scale9Height": 110,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5
+                            },
+                            "Position": {
+                              "X": 39.0,
+                              "Y": 0.0
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PrePosition": {
+                              "X": 0.5,
+                              "Y": 0.0
+                            },
+                            "PreSize": {
+                              "X": 0.195,
+                              "Y": 0.55
+                            },
+                            "Tag": 48,
+                            "ActionTag": 12674233,
+                            "Size": {
+                              "X": 78.0,
+                              "Y": 110.0
+                            },
+                            "Name": "Image_GunBarrel_18_24",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": 1374390386,
+                        "Size": {
+                          "X": 78.0,
+                          "Y": 110.0
+                        },
+                        "Name": "Panel_GunBarrel",
+                        "ctype": "PanelObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Battery/money_back3.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 149,
+                        "Scale9Height": 46,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 297.61,
+                          "Y": 45.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 1.0796,
+                          "Y": 0.225
+                        },
+                        "PreSize": {
+                          "X": 0.5405,
+                          "Y": 0.23
+                        },
+                        "LeftMargin": 223.11,
+                        "RightMargin": -96.4512,
+                        "TopMargin": 132.0,
+                        "BottomMargin": 22.0,
+                        "Tag": 49,
+                        "ActionTag": 2032270447,
+                        "Size": {
+                          "X": 149.0,
+                          "Y": 46.0
+                        },
+                        "Name": "Image_6_20_26",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FontSize": 20,
+                        "LabelText": "Text Label",
+                        "HorizontalAlignmentType": "HT_Center",
+                        "OutlineSize": 0,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 0,
+                        "ShadowOffsetY": 0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 297.7115,
+                          "Y": 43.56
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": 1.08,
+                          "Y": 0.2178
+                        },
+                        "PreSize": {
+                          "X": 0.3301,
+                          "Y": 0.115
+                        },
+                        "LeftMargin": 252.2115,
+                        "RightMargin": -67.5527,
+                        "TopMargin": 144.94,
+                        "BottomMargin": 32.06,
+                        "Tag": 50,
+                        "ActionTag": 1920700394,
+                        "Size": {
+                          "X": 91.0,
+                          "Y": 23.0
+                        },
+                        "Name": "Text_CoinShow",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": 971742838,
+                    "Size": {
+                      "X": 275.6588,
+                      "Y": 200.0
+                    },
+                    "Name": "Panel_turret3",
                     "ctype": "PanelObjectData"
                   }
                 ],
@@ -564,8 +2114,57 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 702.9998,
-                  "Y": 363.9999
+                  "X": 683.0,
+                  "Y": 384.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 1.0
+                },
+                "Tag": 13,
+                "ActionTag": -1940622807,
+                "Size": {
+                  "X": 1366.0,
+                  "Y": 768.0
+                },
+                "Name": "Panel_Coin",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "StretchWidthEnable": true,
+                "StretchHeightEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 683.0,
+                  "Y": 384.0
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -574,8 +2173,8 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.5146,
-                  "Y": 0.474
+                  "X": 0.5,
+                  "Y": 0.5
                 },
                 "PreSize": {
                   "X": 1.0,
@@ -583,17 +2182,222 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 19.9998,
-                "RightMargin": -19.9998,
-                "TopMargin": 20.0001,
-                "BottomMargin": -20.0001,
-                "Tag": 13,
-                "ActionTag": -1940622807,
+                "Tag": 16,
+                "Children": [
+                  {
+                    "BackColorAlpha": 102,
+                    "ComboBoxIndex": 1,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 522.2218,
+                      "Y": -155.0592
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.3823,
+                      "Y": -0.2019
+                    },
+                    "PreSize": {
+                      "X": 0.2196,
+                      "Y": 0.2604
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 372.2218,
+                    "RightMargin": 693.7782,
+                    "TopMargin": 823.0592,
+                    "BottomMargin": -255.0592,
+                    "Tag": 17,
+                    "Children": [
+                      {
+                        "FontSize": 14,
+                        "ButtonText": "",
+                        "TextColor": {
+                          "R": 65,
+                          "G": 65,
+                          "B": 70
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "Button/btn_sf_3.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "Button/btn_sf_2.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "Button/btn_sf_0.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 54,
+                        "Scale9Height": 61,
+                        "OutlineSize": 0,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 0,
+                        "ShadowOffsetY": 0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 52.396,
+                          "Y": 154.1948
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.1747,
+                          "Y": 0.771
+                        },
+                        "PreSize": {
+                          "X": 0.28,
+                          "Y": 0.415
+                        },
+                        "LeftMargin": 10.396,
+                        "RightMargin": 205.604,
+                        "TopMargin": 4.3052,
+                        "BottomMargin": 112.6948,
+                        "Tag": 18,
+                        "ActionTag": 2117937171,
+                        "Size": {
+                          "X": 84.0,
+                          "Y": 83.0
+                        },
+                        "Name": "Button_AddFishCoin",
+                        "ctype": "ButtonObjectData"
+                      },
+                      {
+                        "FontSize": 14,
+                        "ButtonText": "",
+                        "TextColor": {
+                          "R": 65,
+                          "G": 65,
+                          "B": 70
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "Button/btn_xiafen_3.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "Button/btn_xiafen_2.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "Button/btn_xiafen_0.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 54,
+                        "Scale9Height": 61,
+                        "OutlineSize": 0,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 0,
+                        "ShadowOffsetY": 0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 239.0441,
+                          "Y": 156.1725
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.7968,
+                          "Y": 0.7809
+                        },
+                        "PreSize": {
+                          "X": 0.28,
+                          "Y": 0.415
+                        },
+                        "LeftMargin": 197.0441,
+                        "RightMargin": 18.9559,
+                        "TopMargin": 2.3275,
+                        "BottomMargin": 114.6725,
+                        "Tag": 19,
+                        "ActionTag": -613963936,
+                        "Size": {
+                          "X": 84.0,
+                          "Y": 83.0
+                        },
+                        "Name": "Button_SubFishCoin",
+                        "ctype": "ButtonObjectData"
+                      }
+                    ],
+                    "ActionTag": -1451506472,
+                    "Size": {
+                      "X": 300.0,
+                      "Y": 200.0
+                    },
+                    "Name": "Panel_TowerConttrol",
+                    "ctype": "PanelObjectData"
+                  }
+                ],
+                "ActionTag": -1843540126,
                 "Size": {
                   "X": 1366.0,
                   "Y": 768.0
                 },
-                "Name": "Panel_Coin",
+                "Name": "Panel_Conttrol",
                 "ctype": "PanelObjectData"
               }
             ],
@@ -614,9 +2418,26 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "Button/btn_xiafen_2.png",
+        "Button/btn_xiafen_3.png",
+        "Button/btn_sf_0.png",
+        "Button/btn_xiafen_0.png",
+        "Battery/turret1.png",
+        "Battery/money_back0.png",
         "Battery/gun02_double.png",
+        "Battery/turret0.png",
+        "Background/normal_map0.png",
+        "Battery/turret2.png",
+        "Battery/money_back1.png",
+        "Battery/money_back2.png",
+        "Button/btn_sf_3.png",
+        "Button/btn_sf_2.png",
+        "Battery/money_back4.png",
+        "Battery/turret4.png",
+        "Battery/money_back5.png",
         "Battery/turret5.png",
-        "Background/normal_map0.png"
+        "Battery/money_back3.png",
+        "Battery/turret3.png"
       ],
       "ctype": "GameProjectData"
     }

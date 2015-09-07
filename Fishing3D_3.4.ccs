@@ -17,6 +17,42 @@
           <Image Name="turret4.png" />
           <Image Name="turret5.png" />
           <Image Name="gun02_double.png" />
+          <Image Name="money_back0.png" />
+          <Image Name="money_back1.png" />
+          <Image Name="money_back2.png" />
+          <Image Name="money_back3.png" />
+          <Image Name="money_back4.png" />
+          <Image Name="money_back5.png" />
+        </Folder>
+        <Folder Name="Button">
+          <Image Name="btn_jianpao_0.png" />
+          <Image Name="btn_jianpao_1.png" />
+          <Image Name="btn_jianpao_2.png" />
+          <Image Name="btn_jianpao_3.png" />
+          <Image Name="btn_jiapao_0.png" />
+          <Image Name="btn_jiapao_1.png" />
+          <Image Name="btn_jiapao_2.png" />
+          <Image Name="btn_jiapao_3.png" />
+          <Image Name="btn_sdsj_0.png" />
+          <Image Name="btn_sdsj_1.png" />
+          <Image Name="btn_sdsj_2.png" />
+          <Image Name="btn_sdsj_3.png" />
+          <Image Name="btn_sf_0.png" />
+          <Image Name="btn_sf_1.png" />
+          <Image Name="btn_sf_2.png" />
+          <Image Name="btn_sf_3.png" />
+          <Image Name="btn_xiafen_0.png" />
+          <Image Name="btn_xiafen_1.png" />
+          <Image Name="btn_xiafen_2.png" />
+          <Image Name="btn_xiafen_3.png" />
+          <Image Name="btn_yjsf_0.png" />
+          <Image Name="btn_yjsf_1.png" />
+          <Image Name="btn_yjsf_2.png" />
+          <Image Name="btn_yjsf_3.png" />
+          <Image Name="btn_zdsj_0.png" />
+          <Image Name="btn_zdsj_1.png" />
+          <Image Name="btn_zdsj_2.png" />
+          <Image Name="btn_zdsj_3.png" />
         </Folder>
       </RootFolder>
     </Group>

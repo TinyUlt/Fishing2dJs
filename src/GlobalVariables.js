@@ -1,11 +1,21 @@
 (function(_G){
 
+
+    //需要适配的层
+    var loadingSceneNeedFit = [];
     var gameSceneNeedFit = [
     {name:"Panel_Background", type:FitSolution.UIFitType.NoBoard},
+    {name:"Panel_turret0", type:FitSolution.UIFitType.ShowAll},
+    {name:"Panel_turret1", type:FitSolution.UIFitType.ShowAll},
+    {name:"Panel_turret2", type:FitSolution.UIFitType.ShowAll},
+    {name:"Panel_turret3", type:FitSolution.UIFitType.ShowAll},
+    {name:"Panel_turret4", type:FitSolution.UIFitType.ShowAll},
     {name:"Panel_turret5", type:FitSolution.UIFitType.ShowAll},
+        {name:"Panel_TowerConttrol", type:FitSolution.UIFitType.ShowAll},
 
     ];
-    var loadingSceneNeedFit = [];
+
+    //鱼类型
     var i = 0;
     var fishKind = {
         FISH_WONIUYU : i,			// 蜗牛鱼
@@ -109,22 +119,25 @@
         FISH_CHAIN :++i,					// 闪电鱼 (FISH_WONIUYU-FISH_LANYU) 连 (FISH_WONIUYU-FISH_DENGLONGYU)
     }
 
-
+    //子弹类型
     var bulletKind = {
         bullet1:1,
         bullet2:2,
         bullet3:3,
     }
-    i = 0;
+
+    //子弹文件
     var bulletConfig = [
         {type: bulletKind.bullet1, ExportJsonPath:"Resources/bulletArmature/zidan1.ExportJson", PlistPath:"Resources/bulletArmature/zidan10.plist", PngPath:"Resources/bulletArmature/zidan10.png"},
         {type: bulletKind.bullet2, ExportJsonPath:"Resources/bulletArmature/zidan2.ExportJson", PlistPath:"Resources/bulletArmature/zidan20.plist", PngPath:"Resources/bulletArmature/zidan20.png"},
         {type: bulletKind.bullet3, ExportJsonPath:"Resources/bulletArmature/zidan3.ExportJson", PlistPath:"Resources/bulletArmature/zidan30.plist", PngPath:"Resources/bulletArmature/zidan30.png"},
     ];
-
+    //金币文件
     var coinConfig = [
         {ExportJsonPath:"Resources/coinArmature/jinbi1.ExportJson", PlistPath:"Resources/coinArmature/jinbi10.plist", PngPath:"Resources/coinArmature/jinbi10.png"},
     ]
+    //鱼配置
+    i = 0;
     var fishConfig = [
         {type : fishKind.FISH_WONIUYU + i++,name : "蜗牛鱼",  ArmatureName:"fish_woniuyu", bounding:[{p:cc.p(16,0), r:10},{p:cc.p(0,0), r:10}], boundingAngle:0, positionOffset:cc.p(0,0), ExportJsonPath:"Resources/fishAramture/fish_woniuyu/fish_woniuyu.ExportJson", PlistPath:"Resources/fishAramture/fish_woniuyu/fish_woniuyu0.plist", PngPath:"Resources/fishAramture/fish_woniuyu/fish_woniuyu0.png"},
         { type: fishKind.FISH_WONIUYU + i++, name: "绿草鱼", ArmatureName: "fish_lvcaoyu", bounding: [{ p: cc.p(14, -3), r: 10 }, { p: cc.p(-2, -3), r: 10 }], boundingAngle: 0, positionOffset: cc.p(0, -5), ExportJsonPath: "Resources/fishAramture/fish_lvcaoyu/fish_lvcaoyu.ExportJson", PlistPath: "Resources/fishAramture/fish_lvcaoyu/fish_lvcaoyu0.plist", PngPath: "Resources/fishAramture/fish_lvcaoyu/fish_lvcaoyu0.png" },
@@ -217,12 +230,13 @@
         //{type : fishKind._______ + i++,name : "闪电鱼",  ArmatureName:"_______", bounding:[{p:cc.p(16,0), r:10},{p:cc.p(0,0), r:10}], boundingAngle:0, ExportJsonPath:"Resources/fishAramture/_______/_______.ExportJson", PlistPath:"Resources/fishAramture/_______/_______0.plist", PngPath:"Resources/fishAramture/_______/_______0.png"},
 
     ]
+    //鱼游动类型
     var SwimType =  {
         UnKnow : 0,
         SBSwim : 1,
 
     };
-
+    //需要预先加载文件
     var AllPreLoadFile = new Array();
     //cc.log( fishConfig.length);
     for(var i = 0; i < fishConfig.length; i++){
@@ -240,7 +254,7 @@
         AllPreLoadFile.push(coinConfig[i].PlistPath);
         AllPreLoadFile.push(coinConfig[i].PngPath);
     }
-    //////////////
+    //////////////动画文件
     var AllExportJson = new Array();
     for(var i = 0; i < fishConfig.length; i++){
         AllExportJson.push(fishConfig[i].ExportJsonPath);
@@ -252,8 +266,10 @@
         AllExportJson.push(coinConfig[i].ExportJsonPath)
     }
 
-
+    //计算鱼游动路线的时间间隔
     var swimTimeDt = (1/60.0);
+
+    //炮塔位置
     var kGunPos = [
         { x:326.5, y:768 - 70.0 },
         { x:757.5, y:768 - 70.0 },
@@ -262,6 +278,16 @@
         { x:608.5, y:768 - 685.0 },
         { x:177.5, y:768 - 685 }
     ];
+    var GunPos = [
+        cc.p(kGunPos[0].x,kGunPos[0].y),
+        cc.p(kGunPos[1].x,kGunPos[1].y),
+        cc.p(kGunPos[2].x,kGunPos[2].y),
+        cc.p(kGunPos[3].x,kGunPos[3].y),
+        cc.p(kGunPos[4].x,kGunPos[4].y),
+        cc.p(kGunPos[5].x,kGunPos[5].y),
+    ];
+
+    var TestChairID = 4;
 
 
     _G.GlobalVariables = {
@@ -282,11 +308,14 @@
             currentPlayerManager:null,
             currentCollisionManager:null,
             currentCoinManager:null,
+            currentUIControlManager:null,
         },
         currentGameLayer:null,
         AllPreLoadFile:AllPreLoadFile,
         AllExportJson:AllExportJson,
-        kGunPos:kGunPos
+        kGunPos:kGunPos,
+        GunPos:GunPos,
+        TestChairID:TestChairID
     }
 
 })(this)

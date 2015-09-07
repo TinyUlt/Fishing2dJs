@@ -6,7 +6,7 @@ function CoinManager(){
         var coinArray = new Array();
         var fishType = fish.type;
 
-        var endPoint = FitSolution.designedToScreen(cc.p(GlobalVariables.kGunPos[chairID].x, GlobalVariables.kGunPos[chairID].y))
+        var endPoint = FitSolution.designedToScreen(GlobalVariables.GunPos[chairID])
         if(fishType <= GlobalVariables.fishKind.FISH_HUANGCAOYU){
             for(var i = 0; i < 5; i ++){
 
@@ -46,7 +46,6 @@ function CoinManager(){
         return coin;
     };
     this.coinActionDone = function(pSender){
-        cc.log(pSender.value);
         GlobalVariables.managers.currentPlayerManager.addFishCoin(pSender.chairID,pSender.value);
         pSender.removeFromParent();
     }

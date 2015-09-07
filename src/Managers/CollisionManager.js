@@ -13,12 +13,11 @@ function CollisionManager(){
                     var bound = boundArray[k];
                     var distance = cc.pDistance(bound.p, bulletPosition);
                     if(distance < bound.r){
-                        cc.log("hit");
                         GlobalVariables.managers.currentSwimManager.destroySwim(fish);
                         GlobalVariables.managers.currentFishManager.destroyFish(fish, true);
                         GlobalVariables.managers.currentBulletManager.destroyBullet(bullet);
 
-                        var coins = GlobalVariables.managers.currentCoinManager.getCoins( fish ,10, 5  );
+                        var coins = GlobalVariables.managers.currentCoinManager.getCoins( fish ,10, GlobalVariables.TestChairID  );
                         for(var i = 0 ; i < coins.length; i ++){
                             var coin = coins[i];
                             GlobalVariables.currentGameLayer.UILayers.coin.addChild(coin);

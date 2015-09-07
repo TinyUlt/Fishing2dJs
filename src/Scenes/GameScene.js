@@ -112,6 +112,7 @@ var GameLayer = (function(){
              GlobalVariables.managers.currentPlayerManager = new PlayerManager();
              GlobalVariables.managers.currentCollisionManager = new CollisionManager();
              GlobalVariables.managers.currentCoinManager = new CoinManager();
+             GlobalVariables.managers.currentUIControlManager = new UIContrrolManager(mainscene.node);
              this.schedule(this.createFish, 1);
 
              cc.eventManager.addListener({
@@ -132,8 +133,9 @@ var GameLayer = (function(){
              this.UILayers.coin = ccui.helper.seekWidgetByName(mainscene.node, "Panel_Coin");
              //this.UILayers.bullet =
 
-             var Panel_turret = ccui.helper.seekWidgetByName(mainscene.node, "Panel_turret5");
-             GlobalVariables.managers.currentPlayerManager.initPlayer(5, Panel_turret);
+             var Panel_turret = ccui.helper.seekWidgetByName(mainscene.node, "Panel_turret"+GlobalVariables.TestChairID);
+             var Panel_TowerConttrol = ccui.helper.seekWidgetByName(mainscene.node, "Panel_TowerConttrol");
+             GlobalVariables.managers.currentPlayerManager.initPlayer(GlobalVariables.TestChairID, Panel_turret, Panel_TowerConttrol);
 
              //var coin = new Coin();
              //this.UILayers.coin.addChild(coin);
@@ -158,7 +160,7 @@ var GameLayer = (function(){
              var target = event.getCurrentTarget();
              var touchPoint = touch.getLocation();
              var endPoint = FitSolution.screenToDesigned(touchPoint);
-             var startPoint =cc.p(GlobalVariables.kGunPos[5].x, GlobalVariables.kGunPos[5].y);
+             var startPoint =GlobalVariables.GunPos[GlobalVariables.TestChairID];
              var bullet = GlobalVariables.managers.currentBulletManager.createBullet({
                  type:GlobalVariables.bulletKind.bullet1,
                  bulletID:0,
@@ -175,7 +177,7 @@ var GameLayer = (function(){
 
              target.UILayers.bullet.addChild(bullet);
 
-             GlobalVariables.managers.currentPlayerManager.setGaunBarrelAngle(5,touchPoint);
+             GlobalVariables.managers.currentPlayerManager.setGaunBarrelAngle(GlobalVariables.TestChairID,touchPoint);
              return true;
          },
          onTouchMoved:function (touch, event) {

@@ -27,6 +27,7 @@
         "src/Managers/BulletManager.js",
         "src/Managers/CollisionManager.js",
         "src/Managers/PlayerManager.js",
+        "src/Managers/UIControlManager.js",
         "src/Scenes/LoadingScene.js",
         "src/Managers/CoinManager.js",
         "src/Scenes/GameScene.js"
